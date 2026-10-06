@@ -1,0 +1,20 @@
+/* .hda-card — generic white card. Parts: __icon __title __body __more __meta. Variants: --raised --link --compact */
+.hda-card{display:flex;flex-direction:column;gap:var(--space-3);background:var(--color-surface);border:var(--border-hair) solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-5) var(--space-6)}
+.hda-card--raised{border-color:transparent;box-shadow:var(--shadow-md)}
+.hda-card--compact{padding:var(--space-4);gap:var(--space-1);border-radius:var(--radius-md)}
+.hda-card--link{transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base) var(--ease-out)}
+.hda-card--link:hover,.hda-card--link:focus-within{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.hda-card__icon{display:grid;place-items:center;width:3rem;height:3rem;border-radius:var(--radius-md);background:var(--hda-blue-lt);color:var(--hda-blue-dk);flex:none}
+.hda-card__icon--coral{background:var(--hda-coral-lt)}
+.hda-card__icon--green{background:var(--hda-green-lt)}
+.hda-card__icon--yellow{background:var(--hda-yellow-lt)}
+.hda-card__title{font-size:var(--text-xl);margin:0}
+.hda-card--compact .hda-card__title{font-size:var(--text-md);line-height:var(--leading-snug)}
+.hda-card__body{margin:0;font-size:var(--text-base);line-height:1.6;color:var(--color-ink)}
+.hda-card__meta{font-size:var(--text-sm);color:var(--color-ink-muted)}
+.hda-card__more{margin-top:auto;font-size:var(--text-sm);font-weight:var(--weight-bold);text-transform:uppercase;letter-spacing:.08em;text-decoration:none;color:var(--color-link)}
+.hda-card__more:hover{color:var(--color-link-hover);text-decoration:underline}
+/* Stretch the "more" link over the whole card (one tab stop, whole card clickable) */
+.hda-card--link .hda-card__more::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.hda-card--link{position:relative}
+.hda-card>.hda-chip{align-self:flex-start}

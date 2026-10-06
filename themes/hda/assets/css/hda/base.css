@@ -1,0 +1,37 @@
+/* Reset + element defaults + small utilities. All token-driven. */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-normal);color:var(--color-ink);background:var(--color-surface);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg,video{max-width:100%;height:auto}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:var(--weight-bold);line-height:var(--leading-tight);color:var(--color-heading);margin:0 0 var(--space-4);letter-spacing:var(--tracking-tight);text-wrap:balance}
+h1{font-size:var(--text-fluid-h1)}
+h2{font-size:var(--text-fluid-h2)}
+h3{font-size:var(--text-fluid-h3)}
+h4{font-size:var(--text-xl);font-family:var(--font-subhead);font-style:italic}
+h5{font-size:var(--text-lg)}
+h6{font-size:var(--text-md);text-transform:uppercase;letter-spacing:var(--tracking-caps);color:var(--color-ink-muted)}
+p{margin:0 0 var(--space-4);text-wrap:pretty}
+a{color:var(--color-link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;transition:color var(--dur-fast) var(--ease-std)}
+a:hover{color:var(--color-link-hover)}
+small{font-size:var(--text-sm)}
+hr{border:0;border-top:var(--border-hair) solid var(--color-border);margin:var(--space-6) 0}
+::selection{background:var(--hda-yellow);color:var(--hda-blue-dk)}
+
+/* Dark scope — flips role tokens so headings, links, eyebrows, borders, secondary/ghost buttons adapt. */
+.hda-on-dark,.hda-section--dark,.hda-hero,.hda-footer,.hda-quote-band{--color-ink:var(--color-on-dark);--color-ink-muted:var(--color-on-dark-muted);--color-heading:var(--color-on-dark);--color-eyebrow:var(--color-accent-on-dark);--color-link:var(--color-link-on-dark);--color-link-hover:var(--color-on-dark);--color-border:var(--color-border-on-dark);--color-action:var(--color-on-dark);--color-on-action:var(--hda-blue-dk);--color-focus:var(--hda-yellow);color:var(--color-on-dark)}
+.hda-on-dark,.hda-section--dark{background-color:var(--hda-blue-dk)}
+/* Light scope — white/paper surfaces reset the roles, so they stay readable when placed inside a dark scope.
+   Must follow the dark-scope rule (same specificity; source order wins). Use .hda-on-light for custom light boxes. */
+.hda-on-light,.hda-hero--paper,.hda-card,.hda-stat,.hda-callout,.hda-pullquote,.hda-facts,.hda-table-wrap,.hda-field,.hda-form-grid{--color-ink:var(--hda-ink);--color-ink-muted:var(--hda-gray-dk);--color-heading:var(--hda-blue-dk);--color-eyebrow:var(--hda-blue);--color-link:var(--hda-blue);--color-link-hover:var(--hda-coral-dk);--color-border:var(--hda-gray-lt);--color-action:var(--hda-blue);--color-on-action:var(--color-on-primary);--color-focus:var(--hda-blue);color:var(--color-ink)}
+
+/* Utilities */
+.hda-eyebrow{font-family:var(--font-body);font-weight:var(--weight-bold);text-transform:uppercase;letter-spacing:var(--tracking-caps);font-size:var(--text-xs);color:var(--color-eyebrow);margin:0 0 var(--space-2)}
+.hda-lead{font-family:var(--font-subhead);font-style:italic;font-size:var(--text-lg);line-height:var(--leading-snug);color:var(--color-ink-muted)}
+.hda-visually-hidden{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.hda-skip-link{position:absolute;left:var(--space-4);top:-4rem;z-index:var(--z-modal);background:var(--hda-blue-dk);color:#fff;padding:var(--space-3) var(--space-4);border-radius:var(--radius-md);font-weight:var(--weight-bold)}
+.hda-skip-link:focus{top:var(--space-4)}
+
+/* Focus — real outline (survives forced-colors); does not alter shape */
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:var(--focus-ring);outline-offset:var(--focus-offset)}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

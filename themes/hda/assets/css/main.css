@@ -1,15 +1,4 @@
-@import "components/header.css";
-@import "components/footer.css";
-
-body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
-}
-
-a {
-  color: #00e;
-  text-decoration: none;
-}
+/* Entry point. hda/ is copied unedited from the Claude Design export; re-export and overwrite it to update.
+   Site-specific styles go in site.css, never in hda/. Fonts are linked separately (static/css/fonts.css). */
+@import "hda/main.css";
+@import "site.css";

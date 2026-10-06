@@ -23,6 +23,14 @@ Hugo site with Sveltia CMS, replacing the Wix site. This is an early scaffold: t
 
 Templates are in `themes/hda/layouts/` (a lightly modified `hugo new theme` skeleton). CMS config is `static/admin/config.yml`.
 
+## Design system
+
+The HDA design system (colors, fonts, `hda-*` components) was exported from Claude Design and copied into the theme. Pages load its fonts, colors, and base styles, but the templates don't use its components yet.
+
+- **Rules and file locations:** [`.claude/skills/hda-design/SKILL.md`](.claude/skills/hda-design/SKILL.md). Claude Code loads it as the `hda-design` skill.
+- **Updating:** re-export from Claude Design and overwrite `themes/hda/assets/css/hda/`. Never edit that folder by hand; site styles go in `themes/hda/assets/css/site.css`.
+- **Reference:** `design-system/` holds the export's README, component previews, and the original brand PDFs.
+
 `home.txt` and `services.txt` are the original draft copy the content files were built from.
 
 ## What works and what's stubbed
@@ -31,7 +39,7 @@ Templates are in `themes/hda/layouts/` (a lightly modified `hugo new theme` skel
 
 **Stubbed or missing:**
 
-- **Design.** Unstyled HTML from Hugo's default theme skeleton.
+- **Design.** HDA fonts, colors, and base styles load, but the templates are still Hugo's skeleton markup. See [Design system](#design-system).
 - **Hosting.** Not deployed anywhere. `baseURL` in `hugo.yaml` is set to the production domain but nothing serves it.
 - **Old GitHub Pages site.** This repo previously held an unfinished Quarto site, and GitHub Pages still serves it from `/docs` on `main` at https://hdadvisors.github.io/hda-website/. This branch deletes `/docs`, so merging into `main` breaks that URL. Before merging, turn Pages off in the repo settings or switch its source to a GitHub Actions workflow that builds Hugo.
 - **CMS auth.** `backend.repo` in `config.yml` points at `hdadvisors/hda-website`, but GitHub sign-in won't work until there's an OAuth app. Local-repository mode is the only working path.
@@ -42,6 +50,6 @@ Templates are in `themes/hda/layouts/` (a lightly modified `hugo new theme` skel
 
 1. Decide what happens to the old GitHub Pages site (see above) before merging `hugo-sveltia` into `main`
 2. Set up hosting (Netlify or Cloudflare Pages) and a GitHub OAuth app for CMS sign-in
-3. Visual design: build out the `hda` theme's CSS and templates
+3. Visual design: rebuild the templates with the design system's `hda-*` components, try a few layout options, then pick one
 4. Real About and Staff content, staff photos, and an image pipeline (Hugo image processing)
 5. Migrate Wix content and set redirects for old URLs

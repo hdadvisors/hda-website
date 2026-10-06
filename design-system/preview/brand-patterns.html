@@ -1,0 +1,135 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Map patterns" subtitle="Four Richmond-map variants + hero overlay recipes" viewport="1160x1200" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>HDAdvisors — Map patterns</title>
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { background: #fff; padding: 40px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .sub { color: var(--color-ink-muted); font-family: var(--font-subhead); font-style: italic; margin-bottom: 32px; font-size: 18px; }
+  h3 { margin-top: 36px; margin-bottom: 14px; font-size: 22px;}
+
+  .pattern-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;}
+  .pat { border-radius: 14px; overflow: hidden; border: 1px solid var(--color-border);}
+  .pat .img { aspect-ratio: 1; background-size: cover; background-position: center;}
+  .pat .meta {
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--color-ink-muted);
+    font-family: var(--font-mono);
+    display: flex; justify-content: space-between;
+  }
+  .pat .meta b { color: var(--hda-blue-dk); font-family: var(--font-body);}
+
+  .hero-demo {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 280px;
+    padding: 44px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    background:
+      linear-gradient(135deg, var(--overlay-blue-from), var(--overlay-blue-to)),
+      url('../assets/patterns/map-blue.jpg') center/cover;
+    margin-top: 20px;
+  }
+  .hero-demo .hda-eyebrow { color: var(--hda-yellow);}
+  .hero-demo h2 {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin: 6px 0 10px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 540px;
+  }
+  .hero-demo p {
+    font-family: var(--font-subhead);
+    font-style: italic;
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+    max-width: 480px;
+  }
+
+  .hero-demo-cream {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 280px;
+    padding: 44px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--hda-blue-dk);
+    background:
+      linear-gradient(135deg, var(--overlay-paper-from), var(--overlay-paper-to)),
+      url('../assets/patterns/map-coral.jpg') center/cover;
+    margin-top: 20px;
+  }
+  .hero-demo-cream .hda-eyebrow { color: var(--hda-coral-dk);}
+  .hero-demo-cream h2 {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    font-weight: 700;
+    margin: 6px 0 10px;
+    line-height: 1.1;
+  }
+  .hero-demo-cream p {
+    font-family: var(--font-subhead);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--color-ink-muted);
+    margin: 0;
+  }
+
+  .rule {
+    background: var(--hda-cream-lt);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--color-ink-muted);
+    line-height: 1.6;
+  }
+  .rule b { color: var(--hda-blue-dk);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2>Map patterns</h2>
+  <p class="sub">Four City-of-Richmond map variants — a subtle civic cue that HDA is rooted in its region. Always use behind a translucent overlay, never underneath body copy.</p>
+
+  <div class="pattern-grid">
+    <div class="pat"><div class="img" style="background-image:url('../assets/patterns/map-blue.jpg')"></div><div class="meta"><b>Map · blue</b>map-blue.jpg</div></div>
+    <div class="pat"><div class="img" style="background-image:url('../assets/patterns/map-coral.jpg')"></div><div class="meta"><b>Map · coral</b>map-coral.jpg</div></div>
+    <div class="pat"><div class="img" style="background-image:url('../assets/patterns/map-green.jpg')"></div><div class="meta"><b>Map · green</b>map-green.jpg</div></div>
+    <div class="pat"><div class="img" style="background-image:url('../assets/patterns/map-yellow.jpg')"></div><div class="meta"><b>Map · yellow</b>map-yellow.jpg</div></div>
+  </div>
+
+  <h3>Hero · dark overlay</h3>
+  <div class="hero-demo">
+    <div class="hda-eyebrow">Richmond Regional Housing Framework</div>
+    <h2>Tracking the region's affordability gap — a five-year data update</h2>
+    <p>Subsidy, supply, and need across the seven-locality region.</p>
+  </div>
+
+  <h3>Hero · cream overlay</h3>
+  <div class="hero-demo-cream">
+    <div class="hda-eyebrow">Policy brief · Fall 2025</div>
+    <h2>Scenario models for Virginia's statewide rental assistance program</h2>
+    <p>Funding levels, targeted priorities, and the tradeoffs behind each design choice.</p>
+  </div>
+
+  <div class="rule">
+    <b>Rule.</b> The map pattern carries mood, not information. Always sandwich it between 70–95% opaque overlays in blue, cream, or white. If text sits on the pattern, the overlay must bring contrast to AA at the chosen text size.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!doctype html>
+<!-- @dsCard group="Type" name="Typography" subtitle="Self-hosted Lato + variable Roboto Slab (100–900 axis)" viewport="1160x1900" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>HDAdvisors — Type</title>
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { background: #fff; padding: 40px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .title { margin-bottom: 4px; }
+  .sub { color: var(--color-ink-muted); font-family: var(--font-subhead); font-style: italic; margin-bottom: 36px; font-size: 18px; }
+
+  .pair-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  .pair {
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 26px 28px 30px;
+    background: #fff;
+  }
+  .pair-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--hda-blue);
+    margin-bottom: 14px;
+  }
+  .pair h3.specimen { font-size: 30px; margin-bottom: 4px; color: var(--hda-blue-dk);}
+  .pair .sub-spec { font-size: 17px; color: var(--color-ink-muted); margin-bottom: 14px; }
+  .pair p { font-size: 15px; margin: 0; line-height: 1.6; }
+
+  .pair.a h3.specimen { font-family: var(--font-heading); }
+  .pair.a .sub-spec { font-family: var(--font-subhead); font-style: italic; }
+
+  .pair.b h3.specimen { font-family: var(--font-subhead); font-weight: 700; }
+  .pair.b .sub-spec { font-family: var(--font-heading); }
+
+  .scale {
+    border-top: 1px solid var(--color-border);
+    padding-top: 28px;
+  }
+  .scale-row {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 18px;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--color-border);
+  }
+  .scale-row:last-child { border-bottom: none; }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--hda-blue);
+    font-weight: 700;
+  }
+  .value {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-ink-subtle);
+    white-space: nowrap;
+  }
+  .s1 { font-family: var(--font-heading); font-size: 68px; line-height: 1.05; letter-spacing: -0.01em; color: var(--hda-blue-dk); font-weight: 800;}
+  .s2 { font-family: var(--font-heading); font-size: 52px; line-height: 1.1; color: var(--hda-blue-dk); font-weight: 700;}
+  .s3 { font-family: var(--font-heading); font-size: 40px; line-height: 1.15; color: var(--hda-blue-dk); font-weight: 700;}
+  .s4 { font-family: var(--font-heading); font-size: 32px; line-height: 1.2; color: var(--hda-blue-dk); font-weight: 600;}
+  .s5 { font-family: var(--font-subhead); font-style: italic; font-size: 26px; line-height: 1.3; color: var(--color-ink-muted);}
+  .s6 { font-family: var(--font-body); font-size: 18px; line-height: 1.6; }
+  .s7 { font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+  .s8 { font-family: var(--font-body); font-size: 14px; color: var(--color-ink-muted);}
+  .s9 { font-family: var(--font-body); font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; color: var(--hda-blue);}
+
+  .families {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .family {
+    padding: 18px 20px;
+    background: var(--hda-cream-lt);
+    border-radius: 12px;
+  }
+  .family .f-name {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--hda-blue);
+    margin-bottom: 6px;
+  }
+  .family .f-sample-a { font-family: var(--font-heading); font-weight: 700; font-size: 24px; color: var(--hda-blue-dk);}
+  .family .f-sample-b { font-family: var(--font-subhead); font-style: italic; font-weight: 700; font-size: 24px; color: var(--hda-blue-dk);}
+  .family .f-sample-c { font-family: var(--font-body); font-size: 22px; color: var(--color-ink);}
+  .family .f-note { font-size: 12px; color: var(--color-ink-muted); margin-top: 6px;}
+
+  /* ---- Lato weight specimen ---- */
+  .lato-specimen {
+    margin-top: 36px;
+    padding: 28px 32px;
+    background: var(--hda-cream-lt);
+    border-radius: 14px;
+    border-left: 3px solid var(--hda-blue);
+  }
+  .lato-specimen h4 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--hda-blue-dk);
+    margin: 0 0 4px;
+  }
+  .lato-specimen .lato-sub {
+    font-size: 13px;
+    color: var(--color-ink-muted);
+    margin-bottom: 20px;
+    font-family: var(--font-body);
+  }
+  .w-grid {
+    display: grid;
+    grid-template-columns: 110px 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 18px;
+    align-items: baseline;
+  }
+  .w-grid .w-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--hda-blue);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  .w-grid .w-sample {
+    font-family: var(--font-body);
+    font-size: 22px;
+    color: var(--color-ink);
+    line-height: 1.25;
+  }
+  .w-grid .w-sample.italic { font-style: italic; color: var(--color-ink-muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2 class="title">Typography</h2>
+  <p class="sub">A slab-serif voice paired with a warm humanist sans — built for research briefs, policy analysis, and data-heavy documents.</p>
+
+  <div class="families">
+    <div class="family">
+      <div class="f-name">Headings</div>
+      <div class="f-sample-a">Roboto Slab</div>
+      <div class="f-note">Self-hosted variable · weight axis 100–900.</div>
+    </div>
+    <div class="family">
+      <div class="f-name">Subheads</div>
+      <div class="f-sample-b">Gelasio italic</div>
+      <div class="f-note">Editorial voice for pullquotes &amp; leads.</div>
+    </div>
+    <div class="family">
+      <div class="f-name">Body</div>
+      <div class="f-sample-c">Lato Regular</div>
+      <div class="f-note">Self-hosted · Corbel Windows fallback.</div>
+    </div>
+  </div>
+
+  <div class="lato-specimen" style="border-left-color: var(--hda-coral);">
+    <h4>Roboto Slab — variable-axis specimen</h4>
+    <p class="lato-sub">One variable file covers the entire weight axis. Any integer 100–900 is valid, so headings can dial in a tone rather than snap to named weights. Use <code>font-variation-settings: "wght" N</code> or simply <code>font-weight: N</code>.</p>
+
+    <div class="w-grid" style="grid-template-columns: 110px 1fr;">
+      <span class="w-label">100</span>
+      <span class="w-sample" style="font-family: var(--font-heading); font-weight: 100; color: var(--hda-blue-dk);">Housing needs assessment</span>
+
+      <span class="w-label">300</span>
+      <span class="w-sample" style="font-family: var(--font-heading); font-weight: 300; color: var(--hda-blue-dk);">Housing needs assessment</span>
+
+      <span class="w-label">400</span>
+      <span class="w-sample" style="font-family: var(--font-heading); font-weight: 400; color: var(--hda-blue-dk);">Housing needs assessment</span>
+
+      <span class="w-label">500</span>
+      <span class="w-sample" style="font-family: var(--font-heading); font-weight: 500; color: var(--hda-blue-dk);">Housing needs assessment</span>
+
+      <span class="w-label">600</span>
+      <span class="w-sample" style="font-family: var(--font-heading); font-weight: 600; color: var(--hda-blue-dk);">Housing needs assessment</span>
+
+      <span class="w-label">700</span>
+      <span class="w-sample" style="font-family: var(--font-heading); font-weight: 700; color: var(--hda-blue-dk);">Housing needs assessment</span>
+
+      <span class="w-label">800</span>
+      <span class="w-sample" style="font-family: var(--font-heading); font-weight: 800; color: var(--hda-blue-dk);">Housing needs assessment</span>
+
+      <span class="w-label">900</span>
+      <span class="w-sample" style="font-family: var(--font-heading); font-weight: 900; color: var(--hda-blue-dk);">Housing needs assessment</span>
+    </div>
+  </div>
+
+  <div class="lato-specimen">
+    <h4>Lato — self-hosted weight inventory</h4>
+    <p class="lato-sub">All ten cuts shipped in <code>/fonts</code>. Use 400 for body, 700 for emphasis &amp; UI labels, 900 for display accents. 100/300 are available but should be reserved for large sizes — they lose legibility below 18px.</p>
+
+    <div class="w-grid">
+      <span class="w-label">100 · Thin</span>
+      <span class="w-sample" style="font-weight:100;">The housing gap in Richmond</span>
+      <span class="w-sample italic" style="font-weight:100; font-style:italic;">The housing gap in Richmond</span>
+
+      <span class="w-label">300 · Light</span>
+      <span class="w-sample" style="font-weight:300;">The housing gap in Richmond</span>
+      <span class="w-sample italic" style="font-weight:300; font-style:italic;">The housing gap in Richmond</span>
+
+      <span class="w-label">400 · Regular</span>
+      <span class="w-sample" style="font-weight:400;">The housing gap in Richmond</span>
+      <span class="w-sample italic" style="font-weight:400; font-style:italic;">The housing gap in Richmond</span>
+
+      <span class="w-label">700 · Bold</span>
+      <span class="w-sample" style="font-weight:700;">The housing gap in Richmond</span>
+      <span class="w-sample italic" style="font-weight:700; font-style:italic;">The housing gap in Richmond</span>
+
+      <span class="w-label">900 · Black</span>
+      <span class="w-sample" style="font-weight:900;">The housing gap in Richmond</span>
+      <span class="w-sample italic" style="font-weight:900; font-style:italic;">The housing gap in Richmond</span>
+    </div>
+  </div>
+
+  <h3 style="margin-top:40px; margin-bottom: 14px;">Pairings</h3>
+  <div class="pair-grid">
+    <div class="pair a">
+      <div class="pair-label">Option A · Default</div>
+      <h3 class="specimen">Richmond's housing gap</h3>
+      <div class="sub-spec">A five-year look at affordability by locality</div>
+      <p>Over the last five years, the region added 2,760 net affordable rental contracts — concentrated in LIHTC properties in Henrico and Chesterfield.</p>
+    </div>
+    <div class="pair b">
+      <div class="pair-label">Option B · Editorial</div>
+      <h3 class="specimen">Richmond's housing gap</h3>
+      <div class="sub-spec">A five-year look at affordability by locality</div>
+      <p>Over the last five years, the region added 2,760 net affordable rental contracts — concentrated in LIHTC properties in Henrico and Chesterfield.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-bottom: 14px;">Type scale</h3>
+  <div class="scale">
+    <div class="scale-row"><span class="tag">5xl</span><span class="s1">Display</span><span class="value">68 / Slab 800</span></div>
+    <div class="scale-row"><span class="tag">4xl</span><span class="s2">H1 — Report title</span><span class="value">52 / Slab 700</span></div>
+    <div class="scale-row"><span class="tag">3xl</span><span class="s3">H2 — Section</span><span class="value">40 / Slab 700</span></div>
+    <div class="scale-row"><span class="tag">2xl</span><span class="s4">H3 — Subsection</span><span class="value">32 / Slab 600</span></div>
+    <div class="scale-row"><span class="tag">xl</span><span class="s5">H4 — Gelasio italic subhead</span><span class="value">26 / Gelasio italic</span></div>
+    <div class="scale-row"><span class="tag">md</span><span class="s6">Body large — long-form reading at 18/1.6 with Lato.</span><span class="value">18 / Lato 400</span></div>
+    <div class="scale-row"><span class="tag">base</span><span class="s7">Body — the default paragraph for UI and short-form prose.</span><span class="value">16 / Lato 400</span></div>
+    <div class="scale-row"><span class="tag">sm</span><span class="s8">Caption — metadata, figure captions, table footnotes.</span><span class="value">14 / Lato 400</span></div>
+    <div class="scale-row"><span class="tag">xs</span><span class="s9">Eyebrow · Policy brief</span><span class="value">12 / Lato 700 caps</span></div>
+  </div>
+</div>
+</body>
+</html>

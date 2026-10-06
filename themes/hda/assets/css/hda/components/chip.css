@@ -1,0 +1,12 @@
+/* .hda-chip — tag / category pill. Text is always dark ink; the dot (and tint) carry the hue. */
+.hda-chip{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-1) var(--space-3);border-radius:var(--radius-pill);font-family:var(--font-body);font-size:var(--text-sm);font-weight:var(--weight-bold);line-height:1.4;background:var(--color-surface-alt);color:var(--hda-blue-dk);text-decoration:none;max-width:100%;overflow-wrap:anywhere}
+.hda-chip--blue{background:var(--hda-blue-xlt)}
+.hda-chip--blue.hda-chip--dot::before{background:var(--hda-blue)}
+.hda-chip--green{background:var(--hda-green-lt)}
+.hda-chip--green.hda-chip--dot::before{background:var(--hda-green-dk)}
+.hda-chip--yellow{background:var(--hda-yellow-lt)}
+.hda-chip--yellow.hda-chip--dot::before{background:var(--hda-yellow-dk)}
+.hda-chip--coral{background:var(--hda-coral-lt)}
+.hda-chip--coral.hda-chip--dot::before{background:var(--hda-coral-dk)}
+.hda-chip--dot::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor;flex:none}
+a.hda-chip:hover{box-shadow:inset 0 0 0 var(--border-thick) var(--hda-blue-dk);color:var(--hda-blue-dk)}

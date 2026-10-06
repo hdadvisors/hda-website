@@ -1,0 +1,235 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Site kit — full gallery" subtitle="Every token family and hda-* component in context: foundations, actions, content, data, forms, bands, prose, layout, responsive, contrast" viewport="1400x2400" -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HDAdvisors — Site kit</title><link rel="stylesheet" href="styles.css">
+<style>
+.kit-label{font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--color-ink-muted);margin:0 0 var(--space-2)}
+.kit-block{margin-top:var(--space-7)}.kit-block>.kit-sub{margin-bottom:var(--space-4)}.kit-block:first-of-type{margin-top:0}
+.kit-sub{font-size:var(--text-xl);margin:0 0 var(--space-4)}
+.kit-stage{background:var(--color-surface);border:var(--border-hair) solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5)}
+.kit-stage--paper{background:var(--color-surface-alt)}.kit-stage--dark{background:var(--hda-blue-dk);border-color:transparent}
+.kit-row{display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:center}
+.kit-sw{border:var(--border-hair) solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;background:var(--color-surface)}
+.kit-sw__chip{height:4.25rem}.kit-sw p{margin:var(--space-2) var(--space-3) 0;font-size:var(--text-sm);font-weight:var(--weight-bold);line-height:1.2;word-break:break-all}
+.kit-sw code{display:block;margin:var(--space-1) var(--space-3) var(--space-3);font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-ink-muted)}
+.kit-space{display:grid;grid-template-columns:9rem 1fr;align-items:center;gap:var(--space-3);font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-ink-muted);margin-bottom:var(--space-2)}
+.kit-space i{display:block;height:1rem;background:var(--hda-blue);border-radius:var(--radius-sm)}
+.kit-tile{display:grid;place-items:center;height:5.5rem;background:var(--color-surface-alt);font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-ink-muted);text-align:center;padding:var(--space-2)}
+.kit-cell{background:var(--hda-blue-xlt);border:var(--border-hair) dashed var(--hda-blue);border-radius:var(--radius-md);padding:var(--space-4);text-align:center;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--hda-blue-dk)}
+.kit-bar{background:var(--hda-blue-xlt);border:var(--border-hair) dashed var(--hda-blue);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);margin-bottom:var(--space-3);font-family:var(--font-mono);font-size:var(--text-xs);color:var(--hda-blue-dk)}
+.kit-radius{width:5.5rem;height:5.5rem;background:var(--hda-blue-lt);display:grid;place-items:center;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--hda-blue-dk)}
+.kit-shadow{height:5.5rem;background:var(--color-surface);border-radius:var(--radius-md);display:grid;place-items:center;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-ink-muted)}
+.kit-logo{display:grid;place-items:center;height:7rem;border-radius:var(--radius-md);padding:var(--space-4)}.kit-logo img{max-height:100%;width:auto}
+.kit-pat{height:7rem;border-radius:var(--radius-md);background-size:cover;background-position:center}
+.kit-frame{border:var(--border-hair) solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-surface);display:block;max-width:100%}
+.kit-fg{font-family:var(--font-heading);font-weight:var(--weight-bold);font-size:var(--text-lg)}
+.hda-table .kit-pass{font-weight:var(--weight-bold);color:var(--color-success-text)}.hda-table .kit-fail{font-weight:var(--weight-bold);color:var(--color-danger-text)}
+.kit-toc{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-5)}
+section[id]{scroll-margin-top:5rem}
+</style></head>
+<body>
+<a class="hda-skip-link" href="#main">Skip to content</a>
+<header class="hda-header"><div class="hda-header__inner">
+<a class="hda-header__brand" href="#top"><img src="assets/logos/logo-primary.png" alt="HDAdvisors home"></a>
+<button class="hda-header__toggle" type="button" aria-controls="site-nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><span class="hda-visually-hidden">Menu</span></button>
+<nav class="hda-header__nav" id="site-nav" aria-label="Kit sections"><a class="hda-header__link" href="#foundations" aria-current="page">Foundations</a><a class="hda-header__link" href="#actions">Actions</a><a class="hda-header__link" href="#content">Content</a><a class="hda-header__link" href="#data">Data</a><a class="hda-header__link" href="#forms">Forms</a><a class="hda-header__link" href="#layout">Layout</a><a class="hda-header__link" href="#a11y">Contrast</a></nav>
+<a class="hda-btn hda-btn--primary hda-btn--sm hda-header__cta" href="#forms">Start a project</a>
+</div></header>
+<main id="main">
+
+<section class="hda-hero hda-hero--paper" id="top"><img class="hda-hero__bg" src="assets/patterns/map-coral.jpg" alt=""><div class="hda-hero__inner">
+<p class="hda-eyebrow">HDAdvisors design system · Web kit</p>
+<h1 class="hda-hero__title">Every token and <em>component</em>, in context.</h1>
+<p class="hda-hero__lead">A single-page gallery of the <code>hda-*</code> CSS vocabulary built for the Hugo site — foundations, components, layout primitives, responsive behavior and measured contrast.</p>
+<nav class="kit-toc" aria-label="Jump to"><a class="hda-chip hda-chip--blue" href="#foundations">Foundations</a><a class="hda-chip hda-chip--blue" href="#actions">Buttons &amp; chips</a><a class="hda-chip hda-chip--blue" href="#content">Cards, stats &amp; callouts</a><a class="hda-chip hda-chip--blue" href="#data">Tables</a><a class="hda-chip hda-chip--blue" href="#forms">Forms</a><a class="hda-chip hda-chip--blue" href="#bands">Heroes &amp; bands</a><a class="hda-chip hda-chip--blue" href="#prose">Prose</a><a class="hda-chip hda-chip--blue" href="#layout">Layout</a><a class="hda-chip hda-chip--blue" href="#responsive">Responsive</a><a class="hda-chip hda-chip--blue" href="#a11y">Contrast</a></nav>
+</div></section>
+
+<!-- FOUNDATIONS -->
+<section class="hda-section" id="foundations"><div class="hda-container">
+<div class="hda-section__head"><p class="hda-eyebrow">01 · Foundations</p><h2>Color, type, space &amp; marks</h2><p class="hda-lead">Everything downstream is built from these tokens. Hex values are read live from the stylesheet.</p></div>
+
+<div class="kit-block"><h3 class="kit-sub">Core brand &amp; tints</h3>
+<div class="hda-grid hda-grid--4 hda-grid--tight" data-sw="--hda-blue,--hda-green,--hda-yellow,--hda-coral,--hda-blue-lt,--hda-green-lt,--hda-yellow-lt,--hda-coral-lt,--hda-blue-dk,--hda-green-dk,--hda-yellow-dk,--hda-coral-dk"></div></div>
+<div class="kit-block"><h3 class="kit-sub">Neutrals, creams &amp; surfaces</h3>
+<div class="hda-grid hda-grid--4 hda-grid--tight" data-sw="--hda-gray-dk,--hda-gray-md,--hda-gray-lt,--hda-cream-dk,--hda-cream-md,--hda-cream-lt,--hda-blue-xlt,--color-surface-sunk,--color-surface-zebra,--color-ink"></div></div>
+<div class="kit-block"><h3 class="kit-sub">Status (text on these tints is always ink)</h3>
+<div class="hda-grid hda-grid--4 hda-grid--tight" data-sw="--color-info-bg,--color-success-bg,--color-warning-bg,--color-danger-bg,--color-info-border,--color-success-border,--color-warning-border,--color-danger-border"></div></div>
+<div class="kit-block"><h3 class="kit-sub">Categorical ramp · <code>--viz-1…8</code></h3>
+<div class="hda-grid hda-grid--4 hda-grid--tight" data-sw="--viz-1,--viz-2,--viz-3,--viz-4,--viz-5,--viz-6,--viz-7,--viz-8"></div></div>
+
+<div class="kit-block"><h3 class="kit-sub">Typography</h3>
+<div class="hda-grid hda-grid--2">
+<div class="kit-stage"><p class="kit-label">Roboto Slab · headings (fluid)</p><h1>Heading 1 — Housing needs</h1><h2>Heading 2 — Richmond region</h2><h3>Heading 3 — Affordability gap</h3><h4>Heading 4 — Gelasio italic subhead</h4><h5>Heading 5 — Slab, 21px</h5><h6>Heading 6 — Overline</h6></div>
+<div class="kit-stage"><p class="kit-label">Lato · body &amp; UI</p><p class="hda-eyebrow">Eyebrow · Policy brief</p><p class="hda-lead">Lead / subhead — Gelasio italic, used for standfirsts and quotes.</p><p>Body copy sets in Lato at 16px with a 1.55 leading and <strong>bold</strong>, <em>italic</em> and <a href="#typography">link</a> styles. Paragraphs use <code>text-wrap: pretty</code> so lines break cleanly and avoid orphans in narrow columns.</p><p><small>Small — 14px metadata, captions and footnotes.</small></p><ul><li>Unordered list item</li><li>Second item with a longer line that wraps onto a second row to show the rhythm</li></ul><ol><li>Ordered list item</li><li>Second item</li></ol></div>
+</div></div>
+
+<div class="kit-block"><div class="hda-grid hda-grid--3">
+<div><h3 class="kit-sub">Spacing · 4px grid</h3>
+<div class="kit-space"><span>--space-1 · 4</span><i style="width:var(--space-1)"></i></div><div class="kit-space"><span>--space-2 · 8</span><i style="width:var(--space-2)"></i></div><div class="kit-space"><span>--space-3 · 12</span><i style="width:var(--space-3)"></i></div><div class="kit-space"><span>--space-4 · 16</span><i style="width:var(--space-4)"></i></div><div class="kit-space"><span>--space-5 · 24</span><i style="width:var(--space-5)"></i></div><div class="kit-space"><span>--space-6 · 32</span><i style="width:var(--space-6)"></i></div><div class="kit-space"><span>--space-7 · 48</span><i style="width:var(--space-7)"></i></div><div class="kit-space"><span>--space-8 · 64</span><i style="width:var(--space-8)"></i></div><div class="kit-space"><span>--space-9 · 96</span><i style="width:var(--space-9)"></i></div></div>
+<div><h3 class="kit-sub">Radii</h3><div class="kit-row"><div class="kit-radius" style="border-radius:var(--radius-sm)">sm 4</div><div class="kit-radius" style="border-radius:var(--radius-md)">md 8</div><div class="kit-radius" style="border-radius:var(--radius-lg)">lg 14</div><div class="kit-radius" style="border-radius:var(--radius-xl)">xl 20</div><div class="kit-radius" style="border-radius:var(--radius-pill)">pill</div></div></div>
+<div><h3 class="kit-sub">Elevation</h3><div class="kit-stage kit-stage--paper hda-stack"><div class="kit-shadow" style="box-shadow:var(--shadow-xs)">xs</div><div class="kit-shadow" style="box-shadow:var(--shadow-sm)">sm</div><div class="kit-shadow" style="box-shadow:var(--shadow-md)">md</div><div class="kit-shadow" style="box-shadow:var(--shadow-lg)">lg</div></div></div>
+</div></div>
+
+<div class="kit-block"><h3 class="kit-sub">Logos &amp; Richmond map patterns</h3>
+<div class="hda-grid hda-grid--4 hda-grid--tight">
+<div class="kit-logo" style="background:var(--color-surface-alt)"><img src="assets/logos/logo-primary.png" alt="Primary logo"></div>
+<div class="kit-logo" style="background:var(--color-surface-alt)"><img src="assets/logos/icon-blue.png" alt="Blue icon"></div>
+<div class="kit-logo" style="background:var(--hda-blue)"><img src="assets/logos/logo-white.png" alt="Reversed logo"></div>
+<div class="kit-logo" style="background:var(--hda-yellow)"><img src="assets/logos/icon-white.png" alt="White icon on yellow"></div>
+<div class="kit-pat" role="img" aria-label="Blue map pattern" style="background-image:url('assets/patterns/map-blue.jpg')"></div><div class="kit-pat" role="img" aria-label="Coral map pattern" style="background-image:url('assets/patterns/map-coral.jpg')"></div><div class="kit-pat" role="img" aria-label="Green map pattern" style="background-image:url('assets/patterns/map-green.jpg')"></div><div class="kit-pat" role="img" aria-label="Yellow map pattern" style="background-image:url('assets/patterns/map-yellow.jpg')"></div>
+</div></div>
+</div></section>
+
+<!-- ACTIONS -->
+<section class="hda-section hda-section--paper" id="actions"><div class="hda-container">
+<div class="hda-section__head"><p class="hda-eyebrow">02 · Actions</p><h2>Buttons, chips &amp; links</h2></div>
+<div class="kit-block"><h3 class="kit-sub">Button variants</h3><div class="kit-stage"><div class="kit-row"><a class="hda-btn hda-btn--primary" href="#actions">Primary</a><a class="hda-btn hda-btn--secondary" href="#actions">Secondary</a><a class="hda-btn hda-btn--accent" href="#actions">Accent CTA <svg class="hda-btn__icon" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a><a class="hda-btn hda-btn--ghost" href="#actions">Ghost link →</a><button class="hda-btn hda-btn--primary" type="button" disabled>Disabled</button></div></div></div>
+<div class="kit-block"><div class="hda-grid hda-grid--2"><div><h3 class="kit-sub">Sizes</h3><div class="kit-stage"><div class="kit-row"><a class="hda-btn hda-btn--primary hda-btn--lg" href="#actions">Large</a><a class="hda-btn hda-btn--primary" href="#actions">Default</a><a class="hda-btn hda-btn--primary hda-btn--sm" href="#actions">Small</a></div></div></div>
+<div><h3 class="kit-sub">On dark</h3><div class="kit-stage kit-stage--dark hda-on-dark"><div class="kit-row"><a class="hda-btn hda-btn--accent" href="#actions">Accent</a><a class="hda-btn hda-btn--outline-light" href="#actions">Outline light</a><a class="hda-btn hda-btn--ghost" style="color:var(--color-link-on-dark)" href="#actions">Ghost</a></div></div></div></div></div>
+<div class="kit-block"><div class="hda-grid hda-grid--2"><div><h3 class="kit-sub">Chips</h3><div class="kit-stage"><div class="kit-row"><span class="hda-chip hda-chip--blue hda-chip--dot">Policy</span><span class="hda-chip hda-chip--green hda-chip--dot">Development</span><span class="hda-chip hda-chip--yellow hda-chip--dot">Funding</span><span class="hda-chip hda-chip--coral hda-chip--dot">Research</span><span class="hda-chip">Richmond region</span><a class="hda-chip hda-chip--blue" href="#actions">Linked chip</a></div></div></div>
+<div><h3 class="kit-sub">Links</h3><div class="kit-stage"><p>Inline <a href="#actions">default link</a> sits in body copy; hover turns it dark coral. <a class="hda-card__more" href="#actions">Read more →</a> is the card-footer pattern.</p></div></div></div></div>
+</div></section>
+
+<!-- CONTENT -->
+<section class="hda-section" id="content"><div class="hda-container">
+<div class="hda-section__head"><p class="hda-eyebrow">03 · Content</p><h2>Cards, stats, facts &amp; callouts</h2></div>
+
+<div class="kit-block"><h3 class="kit-sub">Link cards · whole card clickable via “Read more”</h3>
+<div class="hda-grid hda-grid--4">
+<article class="hda-card hda-card--link"><div class="hda-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg></div><h3 class="hda-card__title">Policy &amp; research</h3><p class="hda-card__body">Briefs, analysis and fact sheets on the trends that matter locally.</p><a class="hda-card__more" href="#content">Read more →</a></article>
+<article class="hda-card hda-card--link"><div class="hda-card__icon hda-card__icon--coral"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div><h3 class="hda-card__title">Real estate development</h3><p class="hda-card__body">Feasibility, financing and NMTC equity strategy.</p><a class="hda-card__more" href="#content">Read more →</a></article>
+<article class="hda-card hda-card--link"><div class="hda-card__icon hda-card__icon--green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3 class="hda-card__title">Needs assessments</h3><p class="hda-card__body">Quantitative and qualitative gap analysis at any scale.</p><a class="hda-card__more" href="#content">Read more →</a></article>
+<article class="hda-card hda-card--link"><div class="hda-card__icon hda-card__icon--yellow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6M7 17h8"/></svg></div><h3 class="hda-card__title">Program design</h3><p class="hda-card__body">Scenario modeling with open-source methodology.</p><a class="hda-card__more" href="#content">Read more →</a></article>
+</div></div>
+
+<div class="kit-block"><div class="hda-grid hda-grid--2">
+<div><h3 class="kit-sub">Post card · raised, with chip + meta</h3><article class="hda-card hda-card--raised"><span class="hda-chip hda-chip--coral hda-chip--dot">Research brief</span><h3 class="hda-card__title">Richmond’s affordability gap, five years on</h3><p class="hda-card__body">A regional update on subsidy, supply and need across seven localities.</p><p class="hda-card__meta">October 2026 · 12 min read</p></article></div>
+<div><h3 class="kit-sub">Compact cards · directory / clients</h3><div class="hda-grid hda-grid--2 hda-grid--tight"><div class="hda-card hda-card--compact"><span class="hda-chip hda-chip--yellow">Non-profit</span><span class="hda-card__title">Housing Virginia</span><span class="hda-card__meta">Statewide</span></div><div class="hda-card hda-card--compact"><span class="hda-chip hda-chip--blue">Local govt</span><span class="hda-card__title">City of Richmond</span><span class="hda-card__meta">Richmond, VA</span></div><div class="hda-card hda-card--compact"><span class="hda-chip hda-chip--green">CHDO</span><span class="hda-card__title">The Alliance</span><span class="hda-card__meta">Eastern Shore</span></div><div class="hda-card hda-card--compact"><span class="hda-chip hda-chip--coral">Developer</span><span class="hda-card__title">CARITAS</span><span class="hda-card__meta">South Richmond</span></div></div></div>
+</div></div>
+
+<div class="kit-block"><h3 class="kit-sub">Stat cards</h3>
+<div class="hda-grid hda-grid--4">
+<div class="hda-stat"><p class="hda-eyebrow">Affordable rentals</p><div class="hda-stat__value">25,969</div><p class="hda-stat__label">homes across the Richmond region</p><p class="hda-stat__delta">▲ 2,760 since 2020</p></div>
+<div class="hda-stat hda-stat--coral"><p class="hda-eyebrow">Cost-burdened</p><div class="hda-stat__value">47<span class="hda-stat__suffix">%</span></div><p class="hda-stat__label">of renters earning under $35k</p><p class="hda-stat__delta hda-stat__delta--down">▲ 3 pts vs 2019</p></div>
+<div class="hda-stat hda-stat--green"><p class="hda-eyebrow">LIHTC share</p><div class="hda-stat__value">51<span class="hda-stat__suffix">%</span></div><p class="hda-stat__label">of affordable rentals region-wide</p></div>
+<div class="hda-stat hda-stat--yellow hda-stat--flat" style="border:var(--border-hair) solid var(--color-border);border-top:4px solid var(--hda-yellow)"><p class="hda-eyebrow">Flat variant</p><div class="hda-stat__value">20<span class="hda-stat__suffix">+</span></div><p class="hda-stat__label">years serving Virginia</p></div>
+</div></div>
+
+<div class="kit-block"><div class="hda-grid hda-grid--2">
+<div><h3 class="kit-sub">Fact list</h3><dl class="hda-facts" style="border:var(--border-hair) solid var(--color-border)"><dt>Median gross rent · Richmond</dt><dd>$1,450<span class="hda-facts__unit"> / month</span></dd><dt>Units needed by 2030</dt><dd>44,500<span class="hda-facts__unit"> homes</span></dd><dt>Subsidy contracts added</dt><dd>+57<span class="hda-facts__unit"> since Jan 2020</span></dd></dl></div>
+<div><h3 class="kit-sub">Pullquote</h3><blockquote class="hda-pullquote" style="border:var(--border-hair) solid var(--color-border);border-left:4px solid var(--hda-coral)"><p>Richmond continues to support the majority of affordable rentals in the region — about 60 percent, or more than 15,200 units.</p><cite class="hda-pullquote__cite">RRH Framework · §7.2</cite></blockquote></div>
+</div></div>
+
+<div class="kit-block"><h3 class="kit-sub">Callouts</h3>
+<div class="hda-grid hda-grid--2" style="align-items:start">
+<div class="hda-callout"><p class="hda-eyebrow">Methodology note</p><h4 class="hda-callout__title">Section 8 in this section</h4><p class="hda-callout__body">Refers to HUD project-based rental assistance tied to a specific development — not the tenant-based Housing Choice Voucher program.</p></div>
+<div class="hda-grid hda-grid--2 hda-grid--tight"><div class="hda-callout hda-callout--info"><p class="hda-eyebrow">Info</p><p class="hda-callout__body">Data last updated Q2 2026.</p></div><div class="hda-callout hda-callout--success"><p class="hda-eyebrow">Success</p><p class="hda-callout__body">Your message was sent.</p></div><div class="hda-callout hda-callout--warning"><p class="hda-eyebrow">Warning</p><p class="hda-callout__body">Estimates exclude Hanover.</p></div><div class="hda-callout hda-callout--danger"><p class="hda-eyebrow">Error</p><p class="hda-callout__body">We couldn’t save your changes.</p></div></div>
+</div></div>
+</div></section>
+
+<!-- DATA -->
+<section class="hda-section hda-section--paper" id="data"><div class="hda-container">
+<div class="hda-section__head"><p class="hda-eyebrow">04 · Data</p><h2>Tables</h2><p class="hda-lead">Caption band, header row, zebra body, optional footer. Numerics right-align with tabular figures; the wrapper scrolls sideways on small screens.</p></div>
+<div class="hda-table-wrap"><table class="hda-table"><caption>Figure 7.3 · Federally assisted units by subsidy &amp; locality</caption>
+<thead><tr><th scope="col">Locality</th><th scope="col" class="hda-table__num">LIHTC</th><th scope="col" class="hda-table__num">Section 8</th><th scope="col" class="hda-table__num">Other</th><th scope="col" class="hda-table__num">Total</th></tr></thead>
+<tbody><tr><th scope="row">City of Richmond</th><td class="hda-table__num">9,540</td><td class="hda-table__num">4,890</td><td class="hda-table__num">770</td><td class="hda-table__num">15,200</td></tr><tr><th scope="row">Henrico County</th><td class="hda-table__num">3,820</td><td class="hda-table__num">2,900</td><td class="hda-table__num">340</td><td class="hda-table__num">7,060</td></tr><tr><th scope="row">Chesterfield County</th><td class="hda-table__num">3,610</td><td class="hda-table__num">120</td><td class="hda-table__num">80</td><td class="hda-table__num">3,810</td></tr><tr><th scope="row">Hanover County</th><td class="hda-table__num">390</td><td class="hda-table__num">40</td><td class="hda-table__num">0</td><td class="hda-table__num">430</td></tr></tbody>
+<tfoot><tr><th scope="row">Region</th><td class="hda-table__num">17,360</td><td class="hda-table__num">7,950</td><td class="hda-table__num">1,190</td><td class="hda-table__num">26,500</td></tr></tfoot></table></div>
+<div class="kit-block"><h3 class="kit-sub">Compact, no caption</h3><div class="hda-table-wrap"><table class="hda-table hda-table--compact"><thead><tr><th scope="col">Program</th><th scope="col">Administrator</th><th scope="col" class="hda-table__num">Units</th></tr></thead><tbody><tr><th scope="row">Low-Income Housing Tax Credit</th><td>Virginia Housing</td><td class="hda-table__num">17,360</td></tr><tr><th scope="row">Project-based Section 8</th><td>HUD</td><td class="hda-table__num">7,950</td></tr><tr><th scope="row">HOME</th><td>DHCD</td><td class="hda-table__num">1,190</td></tr></tbody></table></div></div>
+</div></section>
+
+<!-- FORMS -->
+<section class="hda-section" id="forms"><div class="hda-container"><div class="hda-split" style="align-items:start">
+<div><p class="hda-eyebrow">05 · Forms</p><h2>Start a project</h2><p class="hda-lead">Labels are always visible, hints and errors are linked with <code>aria-describedby</code>, and every control is at least 44px tall.</p><p>Tell us about your community, timeline and goals. A member of the HDA team will reply within two business days.</p>
+<div class="hda-callout hda-callout--info"><p class="hda-eyebrow">Heads up</p><p class="hda-callout__body">Fields below show default, hint, error and disabled states side by side.</p></div></div>
+<form class="hda-card hda-card--raised" onsubmit="return false" novalidate><div class="hda-form-grid">
+<div class="hda-field"><label class="hda-field__label" for="k-name">Full name</label><input class="hda-field__control" id="k-name" type="text" placeholder="Jordan Lee" autocomplete="name"></div>
+<div class="hda-field"><label class="hda-field__label" for="k-org">Organization type</label><select class="hda-field__control" id="k-org"><option>Non-profit</option><option>Housing authority</option><option>Local government</option><option>Developer</option><option>Lender</option></select></div>
+<div class="hda-field hda-field--error"><label class="hda-field__label" for="k-email">Email</label><input class="hda-field__control" id="k-email" type="email" value="jordan@" aria-invalid="true" aria-describedby="k-email-e"><span class="hda-field__error" id="k-email-e">Enter a complete email address.</span></div>
+<div class="hda-field"><label class="hda-field__label" for="k-loc">Locality</label><input class="hda-field__control" id="k-loc" type="text" aria-describedby="k-loc-h" placeholder="Richmond, VA"><span class="hda-field__hint" id="k-loc-h">City or county where the work takes place</span></div>
+<div class="hda-field hda-field--full" style="grid-column:1/-1"><label class="hda-field__label" for="k-msg">Project details</label><textarea class="hda-field__control" id="k-msg" placeholder="Goals, timeline, budget range…"></textarea></div>
+<div class="hda-field"><label class="hda-field__label" for="k-dis">Reference ID</label><input class="hda-field__control" id="k-dis" type="text" value="Assigned on submit" disabled></div>
+<fieldset class="hda-field" style="border:0;padding:0;margin:0"><legend class="hda-field__label">Preferred contact</legend><label style="display:flex;gap:var(--space-2);align-items:center"><input type="radio" name="k-c" checked> Email</label><label style="display:flex;gap:var(--space-2);align-items:center"><input type="radio" name="k-c"> Phone</label></fieldset>
+<label style="grid-column:1/-1;display:flex;gap:var(--space-2);align-items:center"><input type="checkbox" checked> Send me HDA research briefs</label>
+</div><div class="hda-cluster" style="margin-top:var(--space-5)"><button class="hda-btn hda-btn--primary" type="submit">Send inquiry</button><button class="hda-btn hda-btn--ghost" type="reset">Clear</button></div></form>
+</div></div></section>
+
+<!-- BANDS -->
+<section id="bands">
+<div class="hda-section hda-section--paper" style="padding-bottom:var(--space-5)"><div class="hda-container"><div class="hda-section__head" style="margin-bottom:0"><p class="hda-eyebrow">06 · Heroes &amp; bands</p><h2>Full-bleed sections</h2><p class="hda-lead">Dark pattern hero (default), light paper hero (used above) and the dark quote band. Backgrounds are real <code>&lt;img&gt;</code> elements so Hugo can resize them.</p></div></div></div>
+<div class="hda-hero"><img class="hda-hero__bg" src="assets/patterns/map-blue.jpg" alt=""><div class="hda-hero__inner"><p class="hda-eyebrow">Affordable housing · Community development · Virginia</p><h2 class="hda-hero__title">Turning housing data into <em>real, meaningful action</em>.</h2><p class="hda-hero__lead">Consulting for developers, non-profits, housing authorities, local governments and lenders across the Mid-Atlantic.</p><div class="hda-hero__actions"><a class="hda-btn hda-btn--accent" href="#bands">Explore our services →</a><a class="hda-btn hda-btn--outline-light" href="#bands">Read the Richmond framework</a></div></div></div>
+<div class="hda-quote-band"><img class="hda-quote-band__bg" src="assets/patterns/map-yellow.jpg" alt=""><blockquote class="hda-quote-band__quote"><p>From idea to execution, HDA transforms housing concepts into reality — planning, financing and organizational capacity, all in one team.</p><cite class="hda-quote-band__cite">Maggie Walker Community Land Trust · Richmond, VA</cite></blockquote></div>
+</section>
+
+<!-- PROSE -->
+<section class="hda-section" id="prose"><div class="hda-container hda-container--narrow">
+<div class="hda-section__head"><p class="hda-eyebrow">07 · Prose</p><h2>Markdown content</h2><p class="hda-lead">Wrap <code>{{ .Content }}</code> in <code>hda-prose</code> and the CMS’s Markdown is styled automatically.</p></div>
+<article class="hda-prose hda-prose--lg">
+<p class="hda-lead">Funding levels, targeted priorities, and the tradeoffs behind each design choice.</p>
+<p>Body copy carries <strong>bold emphasis</strong>, <em>italics</em> and <a href="#prose">inline links</a>.<sup><a href="#kit-fn">1</a></sup> Headings, lists, quotes, figures, tables and code all inherit rhythm from the container.</p>
+<h2>What the model assumes</h2>
+<ul><li>Subsidy contracts expire on their stated dates.</li><li>New LIHTC supply follows the 2020–2025 trend.</li><li>Rents grow with regional CPI.</li></ul>
+<h3>Rent growth by scenario</h3>
+<ol><li>Baseline — CPI only</li><li>High — CPI + 1.5 pts</li><li>Low — CPI − 1 pt</li></ol>
+<blockquote><p>Richmond continues to support the majority of affordable rentals in the region.</p><cite>RRH Framework · §7.2</cite></blockquote>
+<figure><div class="kit-pat" role="img" aria-label="Green Richmond map pattern" style="height:12rem;background-image:url('assets/patterns/map-green.jpg')"></div><figcaption>Figure 1. Image with caption. Source: HDA analysis.</figcaption></figure>
+<table><caption>Table 1 · Units by tenure</caption><thead><tr><th>Tenure</th><th>Units</th></tr></thead><tbody><tr><td>Rental</td><td>25,969</td></tr><tr><td>Owner</td><td>4,120</td></tr></tbody></table>
+<p>Inline <code>code</code> and a block:</p><pre><code>{{ $css := resources.Get "css/main.css" | css.Build }}</code></pre>
+<div class="footnotes" id="kit-fn"><p>1. Footnotes sit small and muted below a hairline.</p></div>
+</article></div></section>
+
+<!-- LAYOUT -->
+<section class="hda-section hda-section--paper" id="layout"><div class="hda-container">
+<div class="hda-section__head"><p class="hda-eyebrow">08 · Layout</p><h2>Containers, grids &amp; primitives</h2></div>
+<div class="kit-block"><h3 class="kit-sub">Containers</h3></div></div>
+<div class="hda-container--wide hda-container"><div class="kit-bar">.hda-container--wide · 1320</div></div>
+<div class="hda-container"><div class="kit-bar">.hda-container · 1140 (default)</div></div>
+<div class="hda-container hda-container--narrow"><div class="kit-bar">.hda-container--narrow · 880 (reading width)</div></div>
+<div class="hda-container">
+<div class="kit-block"><h3 class="kit-sub">Auto-fit grids · columns drop as space runs out</h3>
+<div class="hda-grid hda-grid--4 hda-grid--tight"><div class="kit-cell">grid--4</div><div class="kit-cell">grid--4</div><div class="kit-cell">grid--4</div><div class="kit-cell">grid--4</div></div><br>
+<div class="hda-grid hda-grid--3 hda-grid--tight"><div class="kit-cell">grid--3</div><div class="kit-cell">grid--3</div><div class="kit-cell">grid--3</div></div><br>
+<div class="hda-grid hda-grid--2 hda-grid--tight"><div class="kit-cell">grid--2</div><div class="kit-cell">grid--2</div></div></div>
+<div class="kit-block"><div class="hda-grid hda-grid--3"><div><h3 class="kit-sub">Split</h3><div class="hda-split" style="grid-template-columns:1fr 1fr;gap:var(--space-3)"><div class="kit-cell">text</div><div class="kit-cell">figure</div></div></div><div><h3 class="kit-sub">Stack</h3><div class="hda-stack hda-stack--tight"><div class="kit-cell">item</div><div class="kit-cell">item</div><div class="kit-cell">item</div></div></div><div><h3 class="kit-sub">Cluster</h3><div class="hda-cluster"><span class="kit-cell">a</span><span class="kit-cell">b</span><span class="kit-cell">c</span><span class="kit-cell">d</span></div></div></div></div>
+</div></section>
+
+<section class="hda-section hda-section--dark"><div class="hda-container"><div class="hda-split">
+<div><p class="hda-eyebrow">Dark scope · hda-section--dark</p><h2>Headings, links, eyebrows and borders flip automatically.</h2><p>Body copy inherits on-dark ink, and <a href="#layout">links turn pale yellow</a>. No per-component overrides are needed.</p><div class="hda-cluster"><a class="hda-btn hda-btn--accent" href="#layout">Accent</a><a class="hda-btn hda-btn--outline-light" href="#layout">Outline</a></div></div>
+<div class="hda-grid hda-grid--2 hda-grid--tight"><div class="hda-card" style="background:transparent"><h3 class="hda-card__title">Card on dark</h3><p class="hda-card__body">Borders use the on-dark token.</p></div><div class="hda-callout" style="background:transparent"><p class="hda-eyebrow">Note</p><p class="hda-callout__body">Callout on dark.</p></div></div>
+</div></div></section>
+
+<!-- RESPONSIVE -->
+<section class="hda-section" id="responsive"><div class="hda-container">
+<div class="hda-section__head"><p class="hda-eyebrow">09 · Responsive</p><h2>Phone &amp; tablet widths</h2><p class="hda-lead">Live frames at 390px and 768px. Tap the menu button in the phone frame — the mobile nav needs no JavaScript.</p></div>
+<div class="kit-row" style="align-items:flex-start;gap:var(--space-6)"><div><p class="kit-label">390 × 760</p><iframe class="kit-frame" title="Phone width" src="preview/kit-mobile.html" width="390" height="760"></iframe></div><div><p class="kit-label">768 × 760</p><iframe class="kit-frame" title="Tablet width" src="preview/kit-mobile.html" width="768" height="760"></iframe></div></div>
+</div></section>
+
+<!-- A11Y -->
+<section class="hda-section hda-section--paper" id="a11y"><div class="hda-container">
+<div class="hda-section__head"><p class="hda-eyebrow">10 · Contrast</p><h2>Measured text pairings</h2><p class="hda-lead">Ratios are computed in the browser from the live tokens. AA needs 4.5 for body text, 3 for large text (≥24px, or ≥19px bold).</p></div>
+<div class="hda-table-wrap"><table class="hda-table hda-table--compact" id="kit-contrast"><thead><tr><th scope="col">Pairing</th><th scope="col">Sample</th><th scope="col" class="hda-table__num">Ratio</th><th scope="col">Body text</th><th scope="col">Large text</th></tr></thead><tbody></tbody></table></div>
+</div></section>
+</main>
+
+<footer class="hda-footer">
+<div class="hda-footer__grid">
+<div class="hda-footer__brand"><img src="assets/logos/logo-white.png" alt="HDAdvisors"><p class="hda-footer__about">Housing and Development Advisors. Consulting for affordable housing and community development, across Virginia and the Mid-Atlantic.</p></div>
+<div><h2 class="hda-footer__title">Services</h2><ul class="hda-footer__list"><li><a href="#content">Policy &amp; research</a></li><li><a href="#content">Real estate development</a></li><li><a href="#content">Needs assessments</a></li><li><a href="#content">Program design</a></li></ul></div>
+<div><h2 class="hda-footer__title">Firm</h2><ul class="hda-footer__list"><li><a href="#top">About</a></li><li><a href="#top">Staff</a></li><li><a href="#top">Clients</a></li><li><a href="#top">Careers</a></li></ul></div>
+<div><h2 class="hda-footer__title">Contact</h2><ul class="hda-footer__list"><li>Richmond, VA</li><li><a href="#forms">hello@hdadvisors.net</a></li><li><a href="#forms">LinkedIn</a></li></ul></div>
+</div>
+<p class="hda-footer__base">© 2026 Housing &amp; Development Advisors</p>
+</footer>
+
+<script>
+(function(){
+const rgb=c=>c.match(/[\d.]+/g).slice(0,3).map(Number),hex=a=>'#'+a.map(n=>Math.round(n).toString(16).padStart(2,'0')).join('');
+const lum=a=>{const [r,g,b]=a.map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*r+.7152*g+.0722*b};
+const res=(prop,tok)=>{const e=document.createElement('i');e.style[prop]='var('+tok+')';document.body.appendChild(e);const v=getComputedStyle(e)[prop];e.remove();return v};
+document.querySelectorAll('[data-sw]').forEach(g=>{g.dataset.sw.split(',').forEach(t=>{const v=res('backgroundColor',t);const d=document.createElement('div');d.className='kit-sw';d.innerHTML='<div class="kit-sw__chip" style="background:var('+t+')"></div><p>'+t+'</p><code>'+(v.indexOf('rgba')===0?v:hex(rgb(v)))+'</code>';g.appendChild(d)})});
+const pairs=[['--hda-blue','--color-surface'],['--hda-blue-dk','--color-surface'],['--color-ink','--color-surface'],['--color-ink-muted','--color-surface'],['--color-ink-muted','--color-surface-alt'],['--hda-coral-dk','--color-surface'],['--hda-green-dk','--color-surface'],['--hda-coral','--color-surface'],['--hda-green','--color-surface'],['--hda-yellow','--color-surface'],['--hda-yellow-dk','--color-surface'],['--color-ink-subtle','--color-surface'],['--color-on-dark','--hda-blue'],['--color-on-dark','--hda-blue-dk'],['--hda-blue-dk','--hda-yellow'],['--hda-blue-dk','--hda-yellow-lt'],['--hda-blue-dk','--hda-coral-lt'],['--hda-blue-dk','--hda-green-lt'],['--color-on-dark','--hda-coral'],['--color-on-dark','--hda-yellow-dk'],['--hda-yellow','--hda-blue-dk'],['--hda-yellow-lt','--hda-blue-dk']];
+const tb=document.querySelector('#kit-contrast tbody');
+pairs.forEach(([f,b])=>{const L1=lum(rgb(res('color',f))),L2=lum(rgb(res('backgroundColor',b)));const r=(Math.max(L1,L2)+.05)/(Math.min(L1,L2)+.05);const tr=document.createElement('tr');
+tr.innerHTML='<th scope="row"><code>'+f+'</code> on <code>'+b+'</code></th><td><span class="kit-fg" style="background:var('+b+');color:var('+f+');padding:var(--space-1) var(--space-3);border-radius:var(--radius-sm);border:1px solid var(--color-border)">Aa Housing</span></td><td class="hda-table__num">'+r.toFixed(2)+':1</td><td class="'+(r>=4.5?'kit-pass':'kit-fail')+'">'+(r>=4.5?'✓ Pass':'✗ Fail')+'</td><td class="'+(r>=3?'kit-pass':'kit-fail')+'">'+(r>=3?'✓ Pass':'✗ Fail')+'</td>';tb.appendChild(tr)});
+})();
+</script>
+<script src="js/header.js" defer></script>
+</body></html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Logo & marks" subtitle="Primary, icon, reversed lockups + usage rules" viewport="1160x900" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>HDAdvisors — Logo & brand marks</title>
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { background: #fff; padding: 40px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .sub { color: var(--color-ink-muted); font-family: var(--font-subhead); font-style: italic; margin-bottom: 32px; font-size: 18px; }
+
+  .grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; }
+  .tile {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .tile .pane {
+    flex: 1;
+    padding: 40px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tile .pane img { max-width: 85%; max-height: 120px; height: auto;}
+  .tile .meta {
+    padding: 12px 16px;
+    border-top: 1px solid var(--color-border);
+    font-size: 12px;
+    color: var(--color-ink-muted);
+    font-family: var(--font-mono);
+    display: flex;
+    justify-content: space-between;
+  }
+  .tile .meta b { color: var(--hda-blue-dk); font-family: var(--font-body);}
+
+  .pane.blue-bg { background: var(--hda-blue-dk); }
+  .pane.cream-bg { background: var(--hda-cream-lt); }
+  .pane.yellow-bg { background: var(--hda-yellow); }
+
+  h3 { margin-top: 40px; margin-bottom: 14px; font-size: 22px;}
+
+  .rules {
+    background: var(--hda-cream-lt);
+    padding: 22px 28px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 32px;
+  }
+  .rules b { color: var(--hda-blue-dk); font-family: var(--font-heading); font-weight: 700;}
+  .rules ul { margin: 8px 0 0; padding-left: 20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2>Logo &amp; brand marks</h2>
+  <p class="sub">Primary lockup, icon-only variants, and reversed versions for dark surfaces. Use the primary full-color lockup first whenever space permits.</p>
+
+  <div class="grid">
+    <div class="tile">
+      <div class="pane cream-bg"><img src="../assets/logos/logo-primary.png" alt="HDAdvisors primary logo" /></div>
+      <div class="meta"><b>Primary lockup</b> logo-primary.png</div>
+    </div>
+    <div class="tile">
+      <div class="pane cream-bg"><img src="../assets/logos/icon-blue.png" alt="Blue icon" /></div>
+      <div class="meta"><b>Icon · blue</b> icon-blue.png</div>
+    </div>
+    <div class="tile">
+      <div class="pane yellow-bg"><img src="../assets/logos/icon-yellow.png" alt="Yellow icon" /></div>
+      <div class="meta"><b>Icon · yellow</b> icon-yellow.png</div>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top: 20px;">
+    <div class="tile">
+      <div class="pane blue-bg"><img src="../assets/logos/logo-white.png" alt="White primary logo on blue" /></div>
+      <div class="meta"><b>Reversed lockup</b> logo-white.png · use on dark/photo backgrounds</div>
+    </div>
+    <div class="tile">
+      <div class="pane blue-bg"><img src="../assets/logos/icon-white.png" alt="White icon" /></div>
+      <div class="meta"><b>Icon · white</b> icon-white.png</div>
+    </div>
+    <div class="tile">
+      <div class="pane" style="background: var(--hda-coral);"><img src="../assets/logos/icon-white.png" alt="White icon on coral" /></div>
+      <div class="meta"><b>On coral</b> use reversed only</div>
+    </div>
+  </div>
+
+  <div class="rules">
+    <b>Usage rules (from the official style guide)</b>
+    <ul>
+      <li>The primary full-color logo should be the first choice on marketing materials.</li>
+      <li>Use the white version whenever the logo sits on a dark or photographic background.</li>
+      <li>Use the vertical lockup only when horizontal space is constrained.</li>
+      <li>Never distort the logo. Resize smaller only — never enlarge past native resolution.</li>
+      <li>Reduce to icon-only when the full lockup would be smaller than ~18px in type-mark height.</li>
+      <li>Never let text or graphic elements overlap the logo. Maintain clear space equal to the height of the "H".</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

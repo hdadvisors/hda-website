@@ -1,0 +1,12 @@
+/* .hda-table — wrap in .hda-table-wrap for rounded border + horizontal scroll on small screens.
+   Numeric cells: class .hda-table__num. Markdown tables inside .hda-prose get the same look. */
+.hda-table-wrap{overflow-x:auto;border:var(--border-hair) solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-surface)}
+.hda-table,.hda-prose table{width:100%;border-collapse:collapse;font-family:var(--font-body);font-size:var(--text-sm)}
+.hda-table caption,.hda-prose table caption{caption-side:top;text-align:left;padding:var(--space-3) var(--space-5);background:var(--hda-blue-dk);color:var(--color-on-dark);font-family:var(--font-heading);font-weight:var(--weight-semibold);font-size:var(--text-md)}
+.hda-table thead th,.hda-prose th{background:var(--color-surface-alt);color:var(--hda-blue-dk);text-align:left;padding:var(--space-3) var(--space-4);font-weight:var(--weight-bold);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;border-bottom:var(--border-thick) solid var(--hda-blue);white-space:nowrap}
+.hda-table tbody td,.hda-table tbody th,.hda-prose td{padding:var(--space-3) var(--space-4);border-top:var(--border-hair) solid var(--color-border);color:var(--color-ink);text-align:left;vertical-align:top}
+.hda-table tbody th{font-weight:var(--weight-regular);text-transform:none;letter-spacing:0;font-size:inherit;background:none;border-bottom:0;white-space:normal}
+.hda-table tbody tr:nth-child(even) td,.hda-table tbody tr:nth-child(even) th,.hda-prose tbody tr:nth-child(even) td{background:var(--color-surface-zebra)}
+.hda-table tfoot td,.hda-table tfoot th{padding:var(--space-3) var(--space-4);background:var(--color-surface-alt);font-weight:var(--weight-bold);color:var(--hda-blue-dk);border-top:var(--border-thick) solid var(--hda-blue);text-align:left}
+.hda-table .hda-table__num,.hda-table th.hda-table__num{text-align:right;font-variant-numeric:tabular-nums}
+.hda-table--compact td,.hda-table--compact th{padding-block:var(--space-2)!important}

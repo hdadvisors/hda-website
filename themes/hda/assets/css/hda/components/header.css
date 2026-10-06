@@ -1,0 +1,25 @@
+/* .hda-header — sticky top bar. Parts: __inner __brand __nav __link (aria-current="page") __cta __toggle.
+   Markup order: <a.__brand> <button.__toggle aria-controls="…" hidden-until-JS> <nav.__nav id="…"> <a.__cta>
+   Mobile menu = progressive enhancement: js/header.js sets [data-enhanced] on .hda-header and drives aria-expanded.
+   Without JS the nav + CTA simply render stacked and visible on mobile. */
+.hda-header{position:sticky;top:0;z-index:var(--z-sticky);background:var(--color-surface);border-bottom:var(--border-hair) solid var(--color-border)}
+.hda-header__inner{width:min(100% - 2*var(--gutter),var(--container-lg));margin-inline:auto;display:flex;align-items:center;gap:var(--space-5);min-height:4.5rem}
+.hda-header__brand{display:flex;align-items:center;flex:none;margin-right:auto}
+.hda-header__brand img{height:2.625rem;width:auto}
+.hda-header__nav{display:flex;gap:var(--space-5)}
+.hda-header__link{position:relative;display:inline-flex;align-items:center;min-height:2.75rem;font-size:var(--text-sm);font-weight:var(--weight-bold);color:var(--color-ink);text-decoration:none}
+.hda-header__link:hover{color:var(--hda-blue)}
+.hda-header__link[aria-current="page"]{color:var(--hda-blue)}
+.hda-header__link[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--hda-blue)}
+.hda-header__toggle{display:none;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;padding:0;background:transparent;font:inherit;border-radius:var(--radius-md);cursor:pointer;color:var(--hda-blue-dk);border:var(--border-thick) solid var(--hda-blue-dk)}
+.hda-header__toggle svg{width:1.25rem;height:1.25rem;stroke:currentColor;fill:none;stroke-width:2.5}
+.hda-header__toggle[aria-expanded="true"]{background:var(--hda-blue-xlt)}
+@media (max-width:900px){
+.hda-header__inner{flex-wrap:wrap;gap:var(--space-3) var(--space-5);padding-block:var(--space-2)}
+.hda-header__nav{order:3;flex-basis:100%;flex-direction:column;gap:0}
+.hda-header__cta{order:4;margin-bottom:var(--space-3)}
+.hda-header__link{border-top:var(--border-hair) solid var(--color-border);padding-block:var(--space-2)}
+.hda-header__link[aria-current="page"]::after{display:none}
+.hda-header[data-enhanced] .hda-header__toggle{display:inline-flex;order:2}
+.hda-header[data-enhanced] .hda-header__toggle[aria-expanded="false"]~.hda-header__nav,.hda-header[data-enhanced] .hda-header__toggle[aria-expanded="false"]~.hda-header__cta{display:none}
+}

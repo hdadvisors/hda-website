@@ -1,3 +1,5 @@
+{{- /* Fonts stay outside the css.Build bundle so fonts.css's ../fonts/ paths resolve from /css/. */}}
+<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
 {{- with resources.Get "css/main.css" }}
   {{- $opts := dict
     "minify" (cond hugo.IsDevelopment false true)

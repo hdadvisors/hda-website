@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Buttons, chips & form controls" subtitle=".hda-btn, .hda-chip, .hda-field — variants, sizes, states" viewport="1160x1000" -->
+<html lang="en"><head><meta charset="utf-8"><title>HDAdvisors — Buttons & controls</title><link rel="stylesheet" href="../styles.css">
+<style>body{padding:var(--space-7)}.wrap{max-width:1080px;margin:0 auto}h3{margin:var(--space-6) 0 var(--space-3);font-size:var(--text-xl)}.row{display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:center;padding:var(--space-4) var(--space-5);background:var(--color-surface-alt);border-radius:var(--radius-lg)}.row.dark{background:var(--hda-blue-dk)}code{font-family:var(--font-mono);font-size:var(--text-sm)}</style></head>
+<body><div class="wrap">
+<h2>Buttons, chips &amp; form controls</h2>
+<p class="hda-lead">Blue is primary. Yellow (<code>--accent</code>) is the single most important CTA on a page. Coral is never a solid fill.</p>
+<h3>Sizes</h3>
+<div class="row"><button class="hda-btn hda-btn--primary hda-btn--lg">Request a consultation</button><button class="hda-btn hda-btn--primary">Download the brief</button><button class="hda-btn hda-btn--primary hda-btn--sm">View data</button></div>
+<h3>Variants · <code>hda-btn--primary | secondary | accent | ghost</code></h3>
+<div class="row"><button class="hda-btn hda-btn--primary">Primary</button><button class="hda-btn hda-btn--secondary">Secondary</button><button class="hda-btn hda-btn--accent">Accent CTA <svg class="hda-btn__icon" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4"/></svg></button><button class="hda-btn hda-btn--ghost">Read methodology →</button><button class="hda-btn hda-btn--primary" disabled>Disabled</button></div>
+<h3>On dark · <code>hda-btn--outline-light</code></h3>
+<div class="row dark"><button class="hda-btn hda-btn--accent">Accent</button><button class="hda-btn hda-btn--outline-light">Outline light</button></div>
+<h3>Chips · <code>hda-chip--blue | green | yellow | coral</code> + <code>--dot</code></h3>
+<div class="row"><span class="hda-chip hda-chip--blue hda-chip--dot">Policy</span><span class="hda-chip hda-chip--green hda-chip--dot">Development</span><span class="hda-chip hda-chip--yellow hda-chip--dot">Funding</span><span class="hda-chip hda-chip--coral hda-chip--dot">Research</span><span class="hda-chip">Richmond region</span></div>
+<h3>Form fields · default, error, disabled</h3>
+<div class="hda-form-grid">
+<div class="hda-field"><label class="hda-field__label" for="f1">Locality</label><select class="hda-field__control" id="f1"><option>Richmond, VA</option><option>Henrico</option><option>Chesterfield</option></select><span class="hda-field__hint">Filter data by jurisdiction</span></div>
+<div class="hda-field"><label class="hda-field__label" for="f2">AMI band</label><input class="hda-field__control" id="f2" type="text" value="30–60% AMI"><span class="hda-field__hint">Percentage of area median income</span></div>
+<div class="hda-field hda-field--error"><label class="hda-field__label" for="f3">Email</label><input class="hda-field__control" id="f3" type="email" value="name@" aria-invalid="true" aria-describedby="f3e"><span class="hda-field__error" id="f3e">Enter a complete email address.</span></div>
+<div class="hda-field"><label class="hda-field__label" for="f4">Organization</label><input class="hda-field__control" id="f4" type="text" value="Not editable" disabled></div>
+</div>
+</div></body></html>

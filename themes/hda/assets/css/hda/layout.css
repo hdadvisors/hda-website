@@ -1,0 +1,29 @@
+/* Layout primitives. Breakpoints: 640 / 900 / 1140 (see --bp-*). */
+.hda-container{width:min(100% - 2*var(--gutter),var(--container-lg));margin-inline:auto}
+.hda-container--narrow{width:min(100% - 2*var(--gutter),var(--container-md))}
+.hda-container--wide{width:min(100% - 2*var(--gutter),var(--container-xl))}
+
+.hda-section{padding-block:var(--section-pad);background-color:var(--color-surface)}
+.hda-section--paper{background-color:var(--color-surface-alt)}
+.hda-section--flush-top{padding-top:0}
+.hda-section__head{max-width:48rem;margin-bottom:var(--space-7)}
+.hda-section__head>:last-child{margin-bottom:0}
+
+.hda-stack{display:flex;flex-direction:column;gap:var(--space-5)}
+.hda-stack--tight{gap:var(--space-3)}
+.hda-stack--loose{gap:var(--space-7)}
+.hda-cluster{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)}
+
+/* Auto-fit grid: columns drop as space runs out. Modifiers set the minimum column width. */
+.hda-grid{display:grid;gap:var(--space-5);grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+.hda-grid--2{grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr))}
+.hda-grid--3{grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr))}
+.hda-grid--4{grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr))}
+.hda-grid--tight{gap:var(--space-4)}
+
+/* Two-up split (text + figure). Stacks under 900px. */
+.hda-split{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--space-8);align-items:center}
+@media (max-width:900px){.hda-split{grid-template-columns:1fr;gap:var(--space-6)}}
+
+/* Overlap: pulls a row (e.g. stat cards) up over the hero above it */
+.hda-overlap-up{margin-top:calc(-1 * var(--space-9) * .6);position:relative;z-index:var(--z-raised)}

@@ -1,0 +1,182 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Color palette" subtitle="Core, light, dark, grays & creams" viewport="1160x1200" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>HDAdvisors — Colors</title>
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { background: #fff; padding: 32px; color: var(--color-ink); }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .title { margin-bottom: 4px; }
+  .sub { color: var(--color-ink-muted); font-family: var(--font-subhead); font-style: italic; margin-bottom: 32px; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .row:first-of-type { border-top: none; }
+  .row-label {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--hda-blue);
+    padding-top: 6px;
+  }
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .sw {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(35,48,104,0.06);
+    border: 1px solid rgba(35,48,104,0.06);
+    font-family: var(--font-body);
+  }
+  .sw .chip {
+    height: 84px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 12px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .sw.on-dark .chip { color: #fff; }
+  .sw .meta {
+    padding: 8px 12px 10px;
+    background: #fff;
+    border-top: 1px solid var(--color-border);
+    font-size: 11px;
+    color: var(--color-ink-muted);
+    line-height: 1.35;
+    font-variant-numeric: tabular-nums;
+  }
+  .sw .meta .name { color: var(--color-ink); font-weight: 700; display: block; margin-bottom: 2px; font-size: 12px;}
+  .sw.light .chip { color: var(--hda-blue-dk); }
+
+  .neutrals .chip { color: var(--hda-blue-dk); }
+  .neutrals .chip.dark { color: #fff; }
+
+  .legend {
+    margin-top: 32px;
+    padding: 18px 20px;
+    background: var(--hda-cream-lt);
+    border-radius: 12px;
+    border-left: 3px solid var(--hda-blue);
+    font-size: 13px;
+    color: var(--color-ink-muted);
+    line-height: 1.6;
+    font-family: var(--font-body);
+  }
+  .legend b { color: var(--hda-blue-dk); }
+
+  /* ---- Lt. Cream demo ---- */
+  .demo-box {
+    margin-top: 24px;
+    padding: 22px 26px;
+    border-radius: 12px;
+    background: var(--hda-cream-lt);
+    border: 1px solid rgba(35,48,104,0.06);
+    transition: background 160ms ease;
+  }
+  .demo-box .eyebrow {
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 11px;
+    color: var(--hda-coral-dk);
+    margin-bottom: 6px;
+  }
+  .demo-box h4 {
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-size: 20px;
+    color: var(--hda-blue-dk);
+    margin: 0 0 6px;
+  }
+  .demo-box p {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-ink);
+    margin: 0;
+  }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+  <h2 class="title">Color palette</h2>
+  <p class="sub">Four core brand colors — blue, green, yellow, coral — each with a light tint and dark shade, plus three grays and three creams.</p>
+
+  <div class="row">
+    <div class="row-label">Core</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#445ca9">Blue</div><div class="meta"><span class="name">Primary</span>#445ca9 · rgb 68 92 169</div></div>
+      <div class="sw"><div class="chip" style="background:#8baeaa">Green</div><div class="meta"><span class="name">Supporting</span>#8baeaa · rgb 139 174 170</div></div>
+      <div class="sw light"><div class="chip" style="background:#e9ab3f">Yellow</div><div class="meta"><span class="name">Accent</span>#e9ab3f · rgb 233 171 63</div></div>
+      <div class="sw"><div class="chip" style="background:#e76f52">Coral</div><div class="meta"><span class="name">Emphasis</span>#e76f52 · rgb 231 111 82</div></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="row-label">Light</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#7c98cf">Lt. Blue</div><div class="meta"><span class="name">Blue 400</span>#7c98cf</div></div>
+      <div class="sw light"><div class="chip" style="background:#cce0ce">Lt. Green</div><div class="meta"><span class="name">Green 200</span>#cce0ce</div></div>
+      <div class="sw light"><div class="chip" style="background:#fad07c">Lt. Yellow</div><div class="meta"><span class="name">Yellow 300</span>#fad07c</div></div>
+      <div class="sw light"><div class="chip" style="background:#fabc9d">Lt. Coral</div><div class="meta"><span class="name">Coral 300</span>#fabc9d</div></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="row-label">Dark</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#233068">Dk. Blue</div><div class="meta"><span class="name">Blue 900</span>#233068</div></div>
+      <div class="sw"><div class="chip" style="background:#50787e">Dk. Green</div><div class="meta"><span class="name">Green 800</span>#50787e</div></div>
+      <div class="sw"><div class="chip" style="background:#b6762f">Dk. Yellow</div><div class="meta"><span class="name">Yellow 800</span>#b6762f</div></div>
+      <div class="sw"><div class="chip" style="background:#b7513c">Dk. Coral</div><div class="meta"><span class="name">Coral 800</span>#b7513c</div></div>
+    </div>
+  </div>
+
+  <div class="row neutrals">
+    <div class="row-label">Grays</div>
+    <div class="swatches" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="sw"><div class="chip dark" style="background:#746f6e">Dk. Gray</div><div class="meta"><span class="name">Ink muted</span>#746f6e</div></div>
+      <div class="sw"><div class="chip" style="background:#aaaaa9">Med. Gray</div><div class="meta"><span class="name">Border strong</span>#aaaaa9</div></div>
+      <div class="sw"><div class="chip" style="background:#cfcfd0">Lt. Gray</div><div class="meta"><span class="name">Border</span>#cfcfd0</div></div>
+    </div>
+  </div>
+
+  <div class="row neutrals">
+    <div class="row-label">Creams</div>
+    <div class="swatches" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="sw"><div class="chip" style="background:#bfb099">Dk. Cream</div><div class="meta"><span class="name">Warm border</span>#bfb099</div></div>
+      <div class="sw"><div class="chip" style="background:#e0d1bd">Med. Cream</div><div class="meta"><span class="name">Warm surface</span>#e0d1bd</div></div>
+      <div class="sw cream-lt-swatch"><div class="chip" style="background:#faf6ec">Lt. Cream</div><div class="meta"><span class="name">Paper background</span><span id="lt-cream-hex">#faf6ec</span></div></div>
+    </div>
+  </div>
+
+  <div class="legend cream-lt-legend">
+    <b>How to use.</b> Blue is the anchor — links, primary buttons, chart series 1. Coral and yellow are emphasis and data-viz colors, never large page fills. Green is a supporting cool. Creams are the preferred surface for long-form reports, replacing pure white.
+  </div>
+
+  <div class="demo-box">
+    <div class="eyebrow">Text box · Lt. Cream background</div>
+    <h4>Richmond continues to support the majority of affordable rentals.</h4>
+    <p>About 60 percent of the region's subsidized units — more than 15,200 homes — sit within city limits. Chesterfield and Henrico counties both have similar amounts of LIHTC-only units, but Henrico carries nearly 2,900 additional units supported by layered subsidies. This paragraph uses body text (Lato 400, 14px) on the current Lt. Cream value. Toggle the Tweaks panel to compare alternatives.</p>
+  </div>
+</div>
+
+</body>
+</html>

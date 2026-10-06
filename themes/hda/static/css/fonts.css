@@ -1,0 +1,58 @@
+/* HDA fonts — self-hosted. Hugo: put this file at static/css/fonts.css and fonts at static/fonts/,
+   then <link> it before main.css (kept out of the css.Build bundle so url() paths stay as-is).
+   Alternative: replace with a Google Fonts <link> for Lato 400/700/900 + Roboto Slab 400-800. */
+
+@font-face{font-family:'Gelasio';src:url('../fonts/Gelasio-VariableFont_wght.ttf') format('truetype-variations'),url('../fonts/Gelasio-VariableFont_wght.ttf') format('truetype');font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Gelasio';src:url('../fonts/Gelasio-Italic-VariableFont_wght.ttf') format('truetype-variations'),url('../fonts/Gelasio-Italic-VariableFont_wght.ttf') format('truetype');font-weight:400 700;font-style:italic;font-display:swap}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}

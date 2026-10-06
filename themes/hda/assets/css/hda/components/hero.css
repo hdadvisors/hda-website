@@ -1,0 +1,16 @@
+/* .hda-hero — dark pattern hero (default) or --paper (light). Optional <img class="hda-hero__bg" alt="">.
+   Hugo: keep map JPGs in assets/images/patterns/ and output resized WebP via resources.Get (see README).
+   Parts: __inner __title (<em> = italic serif accent) __lead __actions */
+.hda-hero{position:relative;overflow:hidden;isolation:isolate;background-color:var(--hda-blue-dk);padding:clamp(4rem,10vw,6rem) 0 clamp(5rem,13vw,7.5rem)}
+.hda-hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hda-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,var(--overlay-blue-from),var(--overlay-blue-to))}
+.hda-hero__inner{width:min(100% - 2*var(--gutter),var(--container-lg));margin-inline:auto}
+.hda-hero__title{font-size:var(--text-fluid-display);line-height:1.05;letter-spacing:-.015em;max-width:56rem;margin-bottom:var(--space-4)}
+.hda-hero__title em{font-family:var(--font-subhead);font-weight:var(--weight-regular);font-style:italic;color:var(--hda-yellow-lt)}
+.hda-hero__lead{font-family:var(--font-subhead);font-style:italic;font-size:var(--text-xl);line-height:1.4;max-width:40rem;color:var(--color-on-dark-muted);margin-bottom:var(--space-6)}
+.hda-hero__actions{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+
+.hda-hero--paper{background-color:var(--color-surface-alt)}
+.hda-hero--paper::before{background:linear-gradient(135deg,var(--overlay-paper-from),var(--overlay-paper-to))}
+.hda-hero--paper .hda-hero__title em{color:var(--hda-blue)}
+.hda-hero--paper .hda-hero__lead{color:var(--color-ink-muted)}

@@ -1,0 +1,30 @@
+/* .hda-prose — wrap Markdown-rendered content (Hugo {{ .Content }}). Tables inherit table.css.
+   Variants: --lg (18px body, looser leading). Combine with .hda-container--narrow for reading width. */
+.hda-prose{font-size:var(--text-base);line-height:var(--leading-normal);color:var(--color-ink);overflow-wrap:break-word}
+.hda-prose--lg{font-size:var(--text-md);line-height:var(--leading-loose)}
+.hda-prose>*+*{margin-top:var(--space-4)}
+.hda-prose>*:first-child{margin-top:0}
+.hda-prose h2{margin-top:var(--space-7)}
+.hda-prose h3{margin-top:var(--space-6)}
+.hda-prose h2+*,.hda-prose h3+*,.hda-prose h4+*{margin-top:var(--space-3)}
+.hda-prose h2,.hda-prose h3,.hda-prose h4,.hda-prose h5{margin-bottom:0;scroll-margin-top:6rem}
+.hda-prose p,.hda-prose ul,.hda-prose ol,.hda-prose blockquote,.hda-prose pre,.hda-prose figure,.hda-prose table{margin-bottom:0}
+.hda-prose ul,.hda-prose ol{padding-left:1.5em}
+.hda-prose li+li{margin-top:var(--space-2)}
+.hda-prose li::marker{color:var(--hda-blue)}
+.hda-prose strong{font-weight:var(--weight-bold)}
+.hda-prose blockquote{border-left:4px solid var(--hda-coral);padding:var(--space-1) 0 var(--space-1) var(--space-5);margin-inline:0;font-family:var(--font-subhead);font-style:italic;font-size:var(--text-xl);line-height:1.4;color:var(--hda-blue-dk)}
+.hda-prose blockquote p{margin:0;font-size:inherit}
+.hda-prose blockquote cite,.hda-prose blockquote footer{display:block;margin-top:var(--space-2);font-family:var(--font-body);font-style:normal;font-size:var(--text-sm);font-weight:var(--weight-bold);text-transform:uppercase;letter-spacing:.1em;color:var(--color-ink-muted)}
+.hda-prose img{display:block;border-radius:var(--radius-md)}
+.hda-prose figure{margin-inline:0}
+.hda-prose figcaption{margin-top:var(--space-2);font-size:var(--text-sm);color:var(--color-ink-muted);line-height:var(--leading-snug)}
+.hda-prose table{border:var(--border-hair) solid var(--color-border)}
+@media (max-width:640px){.hda-prose table{display:block;overflow-x:auto}}
+.hda-prose code{font-family:var(--font-mono);font-size:.9em;background:var(--color-surface-sunk);padding:.1em .35em;border-radius:var(--radius-sm)}
+.hda-prose pre{overflow-x:auto;background:var(--color-surface-sunk);padding:var(--space-4);border-radius:var(--radius-md);font-size:var(--text-sm);line-height:1.5}
+.hda-prose pre code{background:none;padding:0}
+.hda-prose hr{margin-block:var(--space-7)}
+.hda-prose sup{line-height:0}
+.hda-prose .footnotes{margin-top:var(--space-7);padding-top:var(--space-4);border-top:var(--border-hair) solid var(--color-border);font-size:var(--text-sm);color:var(--color-ink-muted)}
+.hda-prose .footnotes hr{display:none}

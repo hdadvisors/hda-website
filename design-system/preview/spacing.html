@@ -1,0 +1,111 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Spacing, radii & elevation" subtitle="4px base grid + soft paper shadows" viewport="1160x1200" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>HDAdvisors — Spacing, radii, shadows</title>
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { background: #fff; padding: 40px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .sub { color: var(--color-ink-muted); font-family: var(--font-subhead); font-style: italic; margin-bottom: 32px; font-size: 18px; }
+  h3 { margin-top: 36px; margin-bottom: 14px; }
+
+  .space-list { display: flex; flex-direction: column; gap: 8px; }
+  .space-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 14px;
+    background: var(--hda-cream-lt);
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+  .space-row .name { color: var(--hda-blue); font-weight: 700;}
+  .space-row .bar { height: 16px; background: var(--hda-blue); border-radius: 3px; }
+  .space-row .val { text-align: right; color: var(--color-ink-muted);}
+
+  .radius-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .radius-cell {
+    aspect-ratio: 1;
+    background: var(--hda-blue);
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    padding: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .shadow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .shadow-cell {
+    aspect-ratio: 1.1;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-ink-muted);
+  }
+  .shadow-cell .lbl { color: var(--hda-blue); font-weight: 700; margin-bottom: 2px; font-size: 12px;}
+  .shadow-wrap { background: var(--hda-cream-lt); padding: 32px; border-radius: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2>Spacing, radii & elevation</h2>
+  <p class="sub">A 4px base grid, soft paper-like shadows, and a radius set that ranges from crisp print-style corners to pill-shaped chips.</p>
+
+  <h3>Space scale · 4px base</h3>
+  <div class="space-list" id="spaces"></div>
+
+  <h3>Radii</h3>
+  <div class="radius-grid">
+    <div class="radius-cell" style="border-radius: 0">--none · 0</div>
+    <div class="radius-cell" style="border-radius: 4px">--sm · 4</div>
+    <div class="radius-cell" style="border-radius: 8px">--md · 8</div>
+    <div class="radius-cell" style="border-radius: 14px">--lg · 14</div>
+    <div class="radius-cell" style="border-radius: 20px">--xl · 20</div>
+  </div>
+
+  <h3>Elevation</h3>
+  <div class="shadow-wrap">
+    <div class="shadow-grid">
+      <div class="shadow-cell" style="box-shadow: var(--shadow-xs)"><span class="lbl">--shadow-xs</span>hairline lift</div>
+      <div class="shadow-cell" style="box-shadow: var(--shadow-sm)"><span class="lbl">--shadow-sm</span>cards, chips</div>
+      <div class="shadow-cell" style="box-shadow: var(--shadow-md)"><span class="lbl">--shadow-md</span>popovers</div>
+      <div class="shadow-cell" style="box-shadow: var(--shadow-lg)"><span class="lbl">--shadow-lg</span>modals</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const spaces = [
+    ['--space-1', 4], ['--space-2', 8], ['--space-3', 12], ['--space-4', 16],
+    ['--space-5', 24], ['--space-6', 32], ['--space-7', 48], ['--space-8', 64],
+    ['--space-9', 96], ['--space-10', 128]
+  ];
+  const host = document.getElementById('spaces');
+  spaces.forEach(([name, px]) => {
+    const row = document.createElement('div');
+    row.className = 'space-row';
+    row.innerHTML = `<span class="name">${name}</span><div class="bar" style="width:${px}px"></div><span class="val">${px}px</span>`;
+    host.appendChild(row);
+  });
+</script>
+</body>
+</html>
