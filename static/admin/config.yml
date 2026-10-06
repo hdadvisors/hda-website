@@ -1,0 +1,102 @@
+# Sveltia CMS config. Docs: https://github.com/sveltia/sveltia-cms
+#
+# Local editing: open http://localhost:1313/admin/ in Chrome or Edge and click
+# "Work with Local Repository", then pick this project folder. Edits are written
+# straight to content/ and hugo server reloads. No GitHub login needed.
+#
+# The repo below is a placeholder until a GitHub OAuth app is set up.
+backend:
+  name: github
+  repo: hdadvisors/hda-website
+  branch: main
+
+media_folder: static/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home
+        file: content/_index.md
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Title, widget: hidden, default: Home }
+          - { name: headline, label: Headline, widget: string }
+          - { name: subhead, label: Subhead, widget: text }
+          - { name: body, label: Intro, widget: markdown }
+          - { name: track_record, label: Track record, widget: markdown }
+      - name: about
+        label: About
+        file: content/about.md
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+      - name: services_page
+        label: Services page
+        file: content/services/_index.md
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Intro, widget: markdown }
+          - { name: closing_heading, label: Closing heading, widget: string }
+          - { name: closing_text, label: Closing text, widget: text }
+      - name: staff_page
+        label: Staff page
+        file: content/staff/_index.md
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Intro, widget: markdown }
+      - name: contact
+        label: Contact info
+        file: content/contact.md
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: address, label: Address, widget: string }
+          - { name: email, label: Email, widget: string }
+          - { name: phone, label: Phone, widget: string }
+
+  - name: services
+    label: Service categories
+    label_singular: Service category
+    folder: content/services
+    format: yaml-frontmatter
+    create: true
+    sortable_fields: [weight, title]
+    fields:
+      - { name: title, label: Category name, widget: string }
+      - { name: summary, label: Home page summary, widget: text }
+      - { name: weight, label: Order, widget: number, value_type: int }
+      - { name: body, label: Intro, widget: markdown }
+      - { name: offerings, label: Offerings, widget: list, field: { name: item, label: Offering, widget: string } }
+
+  - name: staff
+    label: Staff
+    label_singular: Staff member
+    folder: content/staff
+    format: yaml-frontmatter
+    create: true
+    sortable_fields: [weight, title]
+    fields:
+      - { name: title, label: Name, widget: string }
+      - { name: position, label: Job title, widget: string }
+      - { name: photo, label: Photo, widget: image, required: false }
+      - { name: weight, label: Order, widget: number, value_type: int }
+      - { name: body, label: Bio, widget: markdown }
+
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    folder: content/blog
+    format: yaml-frontmatter
+    create: true
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime }
+      - { name: draft, label: Draft, widget: boolean, default: true }
+      - { name: body, label: Body, widget: markdown }

@@ -1,6 +1,0 @@
----
-title: "assessments"
-format: html
----
-
-Our comprehensive housing needs assessments combine quantitative data analysis with qualitative research to provide a nuanced understanding of local housing challenges and opportunities. We analyze demographic trends, housing market conditions, and economic indicators while gathering input from residents, service providers, and other stakeholders. Our assessments include detailed gap analyses that identify specific housing needs by income level, household type, and special populations. We translate technical findings into clear recommendations for housing production targets, policy changes, and program investments that respond to identified needs and market realities.

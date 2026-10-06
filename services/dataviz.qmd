@@ -1,6 +1,0 @@
----
-title: "dataviz"
-format: html
----
-
-Our team transforms complex housing data into clear, compelling visual formats that make information accessible to diverse audiences. We create interactive dashboards, infographics, maps, and charts that highlight key patterns and relationships in housing markets and needs. Our visualization work supports both strategic planning and public communication, helping stakeholders understand housing trends and their implications. We specialize in presenting technical information in ways that resonate with non-technical audiences, using visualization techniques that reveal insights that might be missed in traditional data presentations.

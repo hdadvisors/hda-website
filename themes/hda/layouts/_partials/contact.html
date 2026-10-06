@@ -1,0 +1,7 @@
+{{- with site.GetPage "/contact" }}
+<address>
+  {{ .Params.address }}<br>
+  <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a><br>
+  <a href="tel:{{ replace .Params.phone "-" "" }}">{{ .Params.phone }}</a>
+</address>
+{{- end }}

@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <h1>{{ .Params.headline }}</h1>
+  <p class="subhead">{{ .Params.subhead }}</p>
+  {{ .Content }}
+
+  <h2>Services at a glance</h2>
+  {{ with site.GetPage "/services" }}
+    {{ range .Pages.ByWeight }}
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Params.summary }}</p>
+    {{ end }}
+    <p><a href="{{ .RelPermalink }}">See all services →</a></p>
+  {{ end }}
+
+  <h2>Track record</h2>
+  {{ .Params.track_record | markdownify }}
+
+  <h2>Contact</h2>
+  {{ partial "contact.html" . }}
+{{ end }}

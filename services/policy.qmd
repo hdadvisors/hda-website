@@ -1,6 +1,0 @@
----
-title: "policy"
-format: html
----
-
-HDAdvisors develops innovative housing programs and policies tailored to specific community needs and market conditions. We identify best practices from across the country and adapt them to local contexts, ensuring that new initiatives build on proven models while responding to unique local circumstances. Our design process incorporates input from multiple stakeholders and addresses implementation considerations from the outset. We create detailed program guidelines, application materials, and evaluation frameworks that support efficient administration while achieving intended outcomes. Our approach emphasizes programs that are financially sustainable, administratively feasible, and responsive to evolving community needs.

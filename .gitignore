@@ -1,8 +1,3 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-
-/.quarto/
-
-**/*.quarto_ipynb
+/public/
+/resources/_gen/
+.hugo_build.lock

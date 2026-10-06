@@ -1,6 +1,0 @@
-```{=html}
-<div id="quarto-listing-container">
-  <!-- Content will be dynamically filled by Quarto based on listing settings -->
-  <!-- This file ensures we maintain the default listing format -->
-</div>
-```

@@ -1,0 +1,17 @@
+baseURL: https://hdadvisors.net/
+locale: en-us
+title: HDAdvisors
+theme: hda
+
+menus:
+  main:
+    - { name: Home, pageRef: /, weight: 10 }
+    - { name: About, pageRef: /about, weight: 20 }
+    - { name: Staff, pageRef: /staff, weight: 30 }
+    - { name: Services, pageRef: /services, weight: 40 }
+    - { name: Blog, pageRef: /blog, weight: 50 }
+    - { name: Contact, pageRef: /contact, weight: 60 }
+
+# No tags/categories yet
+taxonomies: {}
+disableKinds: [taxonomy, term]

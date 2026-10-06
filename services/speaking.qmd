@@ -1,6 +1,0 @@
----
-title: "speaking"
-format: html
----
-
-We are go-to experts to talk about affordable housing in Virginia. 

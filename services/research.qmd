@@ -1,6 +1,0 @@
----
-title: "research"
-format: html
----
-
-We conduct targeted research on specific housing topics that combines rigorous academic methods with practical applications. Our research projects include literature reviews, case studies of best practices, program evaluations, and policy analyses tailored to specific community contexts. We design research methodologies that balance quantitative and qualitative approaches to provide holistic understanding of complex housing challenges. Our findings are presented in accessible formats that bridge the gap between academic research and practical implementation, giving clients actionable information to guide decision-making.

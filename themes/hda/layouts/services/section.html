@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range .Pages.ByWeight }}
+    <section>
+      <h2>{{ .Title }}</h2>
+      {{ .Content }}
+      <ul>{{ range .Params.offerings }}<li>{{ . }}</li>{{ end }}</ul>
+    </section>
+  {{ end }}
+  <section>
+    <h2>{{ .Params.closing_heading }}</h2>
+    <p>{{ .Params.closing_text }} <a href="{{ relref . "/contact" }}">Contact us</a>.</p>
+  </section>
+{{ end }}

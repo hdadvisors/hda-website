@@ -1,8 +1,0 @@
-# Default options for all posts
-title-block-banner: true
-author: "HDAdvisors"
-date-format: "MMMM D, YYYY"
-format:
-  html:
-    code-fold: true
-    code-tools: true

@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <p class="position">{{ .Params.position }}</p>
+  {{ with .Params.photo }}<img src="{{ . }}" alt="{{ $.Title }}" width="240">{{ else }}<div class="photo-placeholder">Photo coming soon</div>{{ end }}
+  {{ .Content }}
+  <p><a href="{{ .Parent.RelPermalink }}">← All staff</a></p>
+{{ end }}
