@@ -1,7 +1,7 @@
 ---
 title: Kendra Mamula
 position: Job title TBD
-photo: ""
+photo: klm.jpg
 weight: 50
 ---
 

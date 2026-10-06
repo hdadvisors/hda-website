@@ -1,7 +1,7 @@
 ---
 title: Jonathan Knopf
 position: Job title TBD
-photo: ""
+photo: jtk.jpg
 weight: 20
 ---
 

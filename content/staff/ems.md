@@ -1,7 +1,7 @@
 ---
 title: Erica Sims
 position: Job title TBD
-photo: ""
+photo: ems.jpg
 weight: 10
 ---
 

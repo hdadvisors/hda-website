@@ -1,7 +1,7 @@
 ---
 title: Amelie Rives
 position: Job title TBD
-photo: ""
+photo: amr.jpg
 weight: 30
 ---
 

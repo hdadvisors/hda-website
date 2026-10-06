@@ -1,7 +1,7 @@
 ---
 title: Maria Dougherty
 position: Job title TBD
-photo: ""
+photo: mted.jpg
 weight: 40
 ---
 

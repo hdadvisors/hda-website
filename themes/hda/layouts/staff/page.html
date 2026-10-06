@@ -1,7 +1,11 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   <p class="position">{{ .Params.position }}</p>
-  {{ with .Params.photo }}<img src="{{ . }}" alt="{{ $.Title }}" width="240">{{ else }}<div class="photo-placeholder">Photo coming soon</div>{{ end }}
+  {{- /* photo is a file name in assets/images/staff/; path.Base also tolerates a full path from the CMS. */}}
+  {{ with and .Params.photo (resources.Get (printf "images/staff/%s" (path.Base .Params.photo))) }}
+    {{ $sm := .Resize "240x webp q80" }}{{ $lg := .Resize "480x webp q80" }}
+    <img src="{{ $sm.RelPermalink }}" srcset="{{ $sm.RelPermalink }} 1x, {{ $lg.RelPermalink }} 2x" width="{{ $sm.Width }}" height="{{ $sm.Height }}" alt="{{ $.Title }}">
+  {{ else }}<div class="photo-placeholder">Photo coming soon</div>{{ end }}
   {{ .Content }}
   <p><a href="{{ .Parent.RelPermalink }}">← All staff</a></p>
 {{ end }}

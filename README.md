@@ -16,7 +16,7 @@ Website for HDAdvisors built on Hugo with Sveltia CMS.
 |---|---|---|
 | Home | `content/_index.md` | Headline, subhead, track record in front matter; intro in the body. "Services at a glance" pulls each category's `summary`; contact block pulls from the Contact page. |
 | About | `content/about.md` | Placeholder text |
-| Staff | `content/staff/_index.md`, one file per person in `content/staff/` | Fields: `title` (name), `position`, `photo`, `weight` (sort order); body is the bio. Placeholder text. |
+| Staff | `content/staff/_index.md`, one file per person in `content/staff/`, named by initials (`jtk.md` → `/staff/jtk/`) | Fields: `title` (name), `position`, `photo`, `weight` (sort order); body is the bio. Headshots go in `assets/images/staff/` named by initials (`jtk.jpg`); `photo` holds just the file name, and Hugo resizes it. Placeholder bios and titles. |
 | Services | `content/services/_index.md` (intro + closing section), one file per category | Category fields: `summary` (used on Home), `offerings` list, `weight`. Categories render inline on /services/ only, not as their own pages. |
 | Blog | `content/blog/` | One placeholder post |
 | Contact | `content/contact.md` | `address`, `email`, `phone` in front matter. Single source for the site's contact info. |
@@ -41,7 +41,7 @@ The HDA design system (colors, fonts, `hda-*` components) was exported from Clau
 - **Hosting.** Not deployed anywhere. `baseURL` in `hugo.yaml` is set to the production domain but nothing serves it.
 - **Old GitHub Pages site.** This repo previously held an unfinished Quarto site, and GitHub Pages still serves it from `/docs` on `main` at https://hdadvisors.github.io/hda-website/. This branch deletes `/docs`, so merging into `main` breaks that URL. Before merging, turn Pages off in the repo settings or switch its source to a GitHub Actions workflow that builds Hugo.
 - **CMS auth.** `backend.repo` in `config.yml` points at `hdadvisors/hda-website`, but GitHub sign-in won't work until there's an OAuth app. Local-repository mode is the only working path.
-- **Images.** No photos or image processing. Staff pages show a "Photo coming soon" placeholder; CMS uploads go to `static/images/uploads/` unprocessed.
+- **Images.** Staff headshots are resized by Hugo. Other CMS uploads (Home, Blog) still go to `static/images/uploads/` unprocessed.
 - **Placeholder copy.** About, Staff bios and job titles, the Staff intro, and the blog post.
 
 ## Next steps

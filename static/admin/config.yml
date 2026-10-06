@@ -80,11 +80,14 @@ collections:
     folder: content/staff
     format: yaml-frontmatter
     create: true
+    # File names and URLs use staff initials (jtk.md -> /staff/jtk/). Editors type the initials in the Slug panel.
+    slug: { template: '{{slug}}', editable: [create] }
     sortable_fields: [weight, title]
     fields:
       - { name: title, label: Name, widget: string }
       - { name: position, label: Job title, widget: string }
-      - { name: photo, label: Photo, widget: image, required: false }
+      # Headshots live in assets/images/staff/ (named by initials) so Hugo can resize them; the field stores just the file name.
+      - { name: photo, label: Photo, widget: image, required: false, media_folder: /assets/images/staff, public_folder: '' }
       - { name: weight, label: Order, widget: number, value_type: int }
       - { name: body, label: Bio, widget: markdown }
 
