@@ -1,6 +1,6 @@
 # HDAdvisors website
 
-Hugo site with Sveltia CMS, replacing the Wix site. This is an early scaffold: the content and editing workflow function, but there's no real design yet.
+Website for HDAdvisors built on Hugo with Sveltia CMS.
 
 ## Quick start
 
@@ -30,8 +30,6 @@ The HDA design system (colors, fonts, `hda-*` components) was exported from Clau
 - **Rules and file locations:** [`.claude/skills/hda-design/SKILL.md`](.claude/skills/hda-design/SKILL.md). Claude Code loads it as the `hda-design` skill.
 - **Updating:** re-export from Claude Design and overwrite `themes/hda/assets/css/hda/`. Never edit that folder by hand; site styles go in `themes/hda/assets/css/site.css`.
 - **Reference:** `design-system/` holds the export's README, component previews, and the original brand PDFs.
-
-`home.txt` and `services.txt` are the original draft copy the content files were built from.
 
 ## What works and what's stubbed
 
