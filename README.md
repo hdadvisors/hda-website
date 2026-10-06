@@ -33,13 +33,14 @@ Templates are in `themes/hda/layouts/` (a lightly modified `hugo new theme` skel
 
 - **Design.** Unstyled HTML from Hugo's default theme skeleton.
 - **Hosting.** Not deployed anywhere. `baseURL` in `hugo.yaml` is set to the production domain but nothing serves it.
-- **CMS auth.** `backend.repo` in `config.yml` is a placeholder. GitHub sign-in won't work until there's a real repo and an OAuth app. Local-repository mode is the only working path.
+- **Old GitHub Pages site.** This repo previously held an unfinished Quarto site, and GitHub Pages still serves it from `/docs` on `main` at https://hdadvisors.github.io/hda-website/. This branch deletes `/docs`, so merging into `main` breaks that URL. Before merging, turn Pages off in the repo settings or switch its source to a GitHub Actions workflow that builds Hugo.
+- **CMS auth.** `backend.repo` in `config.yml` points at `hdadvisors/hda-website`, but GitHub sign-in won't work until there's an OAuth app. Local-repository mode is the only working path.
 - **Images.** No photos or image processing. Staff pages show a "Photo coming soon" placeholder; CMS uploads go to `static/images/uploads/` unprocessed.
 - **Placeholder copy.** About, Staff bios and job titles, the Staff intro, and the blog post.
 
 ## Next steps
 
-1. Push to a GitHub repo and set `backend.repo` in `static/admin/config.yml`
+1. Decide what happens to the old GitHub Pages site (see above) before merging `hugo-sveltia` into `main`
 2. Set up hosting (Netlify or Cloudflare Pages) and a GitHub OAuth app for CMS sign-in
 3. Visual design: build out the `hda` theme's CSS and templates
 4. Real About and Staff content, staff photos, and an image pipeline (Hugo image processing)

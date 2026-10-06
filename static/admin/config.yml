@@ -4,7 +4,7 @@
 # "Work with Local Repository", then pick this project folder. Edits are written
 # straight to content/ and hugo server reloads. No GitHub login needed.
 #
-# The repo below is a placeholder until a GitHub OAuth app is set up.
+# GitHub sign-in needs an OAuth app (not set up yet); local mode works without it.
 backend:
   name: github
   repo: hdadvisors/hda-website
